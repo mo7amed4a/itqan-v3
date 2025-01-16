@@ -8,16 +8,16 @@ import { setAcceptLanguage } from '@/lib/axios'
 import FooterApp from '@/components/layouts/Footer/footer'
 import BookingFixed from '@/components/layouts/fixedCps/BookingFixed'
 import HeaderApp from '@/components/layouts/Header/header'
-// import { Tajawal } from 'next/font/google'
+import { Tajawal } from 'next/font/google'
 import { i18n, Locale } from '@/i18n.config'
 import { getTranslations } from '@/lib/dictionary'
 // import { Cairo } from 'next/font/google'
 
-// const tajawal = Tajawal({
-//   subsets: ['latin'],
-//   weight: ['300', '400', '700'],
-//   variable: '--font-tajawal'
-// })
+const tajawal = Tajawal({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-tajawal'
+})
 
 // const cairo = Cairo({
 //   subsets: ['latin'],
@@ -152,7 +152,7 @@ export default async function RootLayout({
         />
       </head>
       <body 
-      // className={tajawal.className + ' ' + tajawal.variable}
+      className={tajawal.className + ' ' + tajawal.variable}
       >
         <Flowbite theme={{ theme: customTheme }}>
           <div className='relative z-[748811718787187841] text-sm'>
