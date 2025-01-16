@@ -1,0 +1,53 @@
+"use client"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+  } from "@/components/ui/carousel";
+import SectionApp from "../section"
+import LinkApp from "@/components/global/LinkApp";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay"
+import { UniversityType } from "../CardUniversity";
+import CardUniversityHomeClient from "../CardUniversityHomeClient";
+
+export default function CyprusSection({
+    data,
+    home
+}: {
+    data: any,
+    home: any
+}) {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+  )
+  return (
+    <SectionApp
+          title={home.best_universitiesTwo.title}
+          className="container lg:max-w-[85vw] 6xl:!container  mx-auto"
+        >
+          <Carousel
+            plugins={[plugin.current]}
+          >
+            <CarouselContent className="px-10 md:px-0">
+              {data &&
+                data.qyprus_universities &&
+                data.qyprus_universities.map((item: UniversityType) => (
+                  <CarouselItem
+                    className="md:basis-1/2 lg:basis-1/3 pb-8"
+                    key={item.id}
+                  >
+                    <LinkApp href={`/universities/${item.slug}`}>
+                      <CardUniversityHomeClient dataLang={home}
+                        // major={t("topMajors")}
+                        btnText={home.form_booking.submit}
+                        university={item}
+                      />
+                    </LinkApp>
+                  </CarouselItem>
+                ))}
+            </CarouselContent>
+          </Carousel>
+        </SectionApp>
+  )
+}

@@ -1,0 +1,548 @@
+{
+  "Header": {
+    "be_our_agent": "كن وكيلنا",
+    "follow_up_on_the_registration_request": "متابعة طلب التسجيل",
+    "search_for_the_university": "ابحث عن الجامعة",
+    "booking_btn": "حجز المقعد الدراسي",
+    "home": "الصفحة الرئيسية",
+    "blog": "المدونة",
+    "about_us": "من نحن",
+    "contact_us": "اتصل بنا",
+    "turkish_universities": "جامعات تركيا",
+    "cyprus_universities": "جامعات قبرص",
+    "student_accommodation": "السكنات الطلابية",
+    "partial_scholarships": "المنح الجزئية",
+    "programs": "كل البرامج",
+    "opportunities": "الفرص",
+    "services": "خدماتنا",
+    "search_university": "ابحث عن الجامعة",
+    "register_now": "سجل الآن",
+    "steps_to_register": "خطوات للتسجيل بالجامعات",
+    "first_arab_site": "الموقع العربي الأول المتخصص بالدراسة",
+    "in_turkey_for_arab_students": "في تركيا للطلاب العرب",
+    "about_itqan": "عن اتقان"
+  },
+  "layOutFixed": {
+    "drawer": {
+      "register_now": "سجل الآن",
+      "personal_info": "المعلومات الشخصية",
+      "name": "الاسم",
+      "surname": "اللقب",
+      "country_of_residence": "بلد الإقامة",
+      "gender": "الجنس",
+      "email": "البريد الإلكتروني",
+      "phone_number": "رقم الهاتف",
+      "university_info": "معلومات التخصص والجامعة",
+      "select_degree": "اختر الدرجة الجامعية",
+      "select_language": "اختر اللغة",
+      "select_specialization": "اختر التخصص",
+      "select_universities": "اختر الجامعات التي تود الانضمام إليها",
+      "message_text": "نص الرسالة",
+      "message_content": "نص الرسالة",
+      "name_required": "الاسم مطلوب",
+      "surname_required": "اللقب مطلوب",
+      "country_required": "بلد الإقامة مطلوب",
+      "gender_required": "الجنس مطلوب",
+      "email_required": "البريد الإلكتروني مطلوب",
+      "invalid_email": "البريد الإلكتروني غير صالح",
+      "phone_required": "رقم الهاتف مطلوب",
+      "select_degree_required": "الدرجة الجامعية مطلوبة",
+      "select_language_required": "اللغة مطلوبة",
+      "select_specialization_required": "التخصص مطلوب",
+      "select_universities_required": "الجامعات مطلوبة",
+      "message_required": "محتوى الرسالة مطلوب",
+      "submitting": "جاري التسجيل",
+      "btnCopy": "نسخ الكود",
+      "followup_request": "تتبع الطلب",
+      "close": "الغاء"
+    }
+  },
+  "Footer": {
+    "siteName": "لأتقان التعليمية",
+    "copyright": "جميع الحقوق محفوظة",
+    "home": "الرئيسية",
+    "aboutUs": "من نحن",
+    "contactUs": "تواصل معنا",
+    "majors": "التخصصات",
+    "services": "خدماتنا",
+    "links": "روابط ذات صلة",
+    "address": "اسطنبول - فاتح - محطة فيندق زاده",
+    "bio": "شركة استشارية أكاديمية رائدة في مجال تسجيل الطلاب في الجامعات التركية والمدارس الدولية ومعاهد اللغة.",
+    "LinkApps": "روابط  اخرى",
+    "TOS": "شروط الخدمة",
+    "agents": "الوكلاء",
+    "privacyPolicy": "سياسة الخصوصية"
+  },
+  "home": {
+    "years_1": "سنة التأسيس",
+    "years_2": "الترتيب محليا",
+    "rank_1": " الترتيب عالميا",
+    "count_1": "عدد التخصصات", 
+    "start_price": "تبدأ الاسعار",
+    "discount": "الخصم",
+    "takh": "تخصصات",
+    "from": "من",
+    "to": "الى",
+    "topMajors": "اهم التخصصات",
+    "filter": "الفلاتر",
+    "hero": {
+      "title": "الموقع العربي الأول المتخصص بالدراسة",
+      "subtitle": "في تركيا للطلاب العرب",
+      "register_now": "سجل الآن",
+      "steps": "خطوات التسجيل بالجامعات",
+      "choose_study": "اختر الدراسة في تركيا",
+      "select_specialty": "اختر التخصص",
+      "select_years": "اختر مدة الدراسة",
+      "select_none": "بدون اختيار",
+      "select_study_level": "اختر مستوى الدراسة",
+      "select_language": "اختر لغة الدراسة",
+      "select_country": "اختر الدولة",
+      "select_cost": "اختر تكلفة الدراسة",
+      "down": "الحد الادني",
+      "up": "الحد الاقصي",
+      "cost": "تكلفة",
+      "select_country_free": "الدول المتاحة",
+      "search": "ابحث",
+      "english": "الانجليزية",
+      "turkish": "التركي",
+      "arabic": "العربية",
+      "master": "ماجستير",
+      "bachelor": "بكارليوس",
+      "medcant": "طب",
+      "engeneer": "هندسة"
+    },
+    "videoCall": {
+      "text": "طلب مكالمة فيديو مع مستشارك التعليمي",
+      "booking_now": "احجز مكالمة الان"
+    },
+    "specialties": {
+      "title": "اهم التخصصات"
+    },
+    "best_universities": {
+      "title": "افضل الجامعات التركية"
+    },
+    "best_universitiesTwo": {
+      "title": "افضل الجامعات القبرصية"
+    },
+    "whyItqan": {
+      "title": "لماذا اتقان؟",
+      "p1": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.",
+      "p2": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.",
+      "p3": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.",
+      "p4": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    },
+    "WhatService": {
+      "title": "ماذا تقدم اتقان",
+      "title2": "في حال سجلت عن طريقها",
+      "read_more": "شاهد المزيد"
+    },
+    "form_booking": {
+      "title": "أستمارة تقديم عن طريق اتقان",
+      "name": "الاسم",
+      "email": "البريد الالكتروني",
+      "mobile_w": "رقم الواتساب",
+      "submit": "سجل الان",
+      "loading": "جاري التسجيل",
+      "name_required": "الاسم مطلوب",
+      "email_required": "البريد الالكتروني مطلوب",
+      "mobile_w_required": "رقم الواتساب مطلوب",
+      "email_invalid": "البريد الالكتروني غير صالح",
+      "mobile_w_invalid": "رقم الواتساب غير صالح"
+    },
+    "numbers": {
+      "title": "اتقان التعليمية",
+      "title2": "ارقام واحصائيات",
+      "itqan_studens_count": "عدد طلاب اتقان بالجامعات التركية",
+      "universities_count": "عدد الجامعات الخاصة في تركيا",
+      "experience_count": "سنوات الخبرة",
+      "international_student_count": "عدد الطلاب الدوليين والاجانب في تركيا",
+      "consultation_count": "عدد الاستشارية الطلابية"
+    },
+    "moth": {
+      "title2": "موثوقون معتمدون",
+      "title": "من افضل الجامعات التركية"
+    },
+    "steps": {
+      "title": "التسجيل بالجامعة",
+      "title2": "خطوات",
+      "read_more": "قراءة المزيد"
+    },
+    "blogs": {
+      "title": "المقالات ومركز المعلومات",
+      "read_more": "قراءة المزيد"
+    },
+    "stories": {
+      "title": "طلاب اتقان التعليمية",
+      "title2": "قصص وشهادات",
+      "title3": "اراء وتعليقات الطلاب واولياء الامور"
+    }
+  },
+  "turkish_universities": {
+    "title": "جامعات تركيا",
+    "links": {
+      "all": "الكل",
+      "istanbulEuropean": "جامعات إسطنبول الأوروبية",
+      "istanbulAsian": "جامعات إسطنبول الآسيوية",
+      "ankara": "جامعات أنقرة",
+      "mersin": "جامعات مرسين",
+      "gaziantep": "جامعات غازي عنتاب"
+    },
+    "mostRanked": "الأكثر تصنيفاً",
+    "topMajors": "أهم التخصصات",
+    "universityInfo": {
+      "name": "جامعة ابن خلدون",
+      "description": "هذا يعزز من فرص الطالب في الحصول على وظائف مرموقة أو متابعة الدراسات العليا في مؤسسات تعليمية ومعترف بها حول العالم.",
+      "establishmentYear": "سنة التأسيس",
+      "ranking": "الترتيب العالمي",
+      "rankingNumber": "5746",
+      "establishedYearValue": "2020",
+      "majors": {
+        "humanSciences": "العلوم الإنسانية",
+        "medicine": "الطب البشري",
+        "computerEngineering": "هندسة الحاسوب",
+        "pharmacy": "الصيدلة"
+      },
+      "startingPrices": "تبدأ الأسعار",
+      "priceRange": {
+        "from": "من",
+        "to": "الى"
+      },
+      "registerNow": "سجل الآن"
+    },
+    "show_more": "مشاهدة المزيد"
+  },
+  "cypriot_universities": {
+    "title": "جامعات قبرص",
+    "years_1": "سنة التأسيس",
+    "years_2": "الترتيب محليا",
+    "rank_1": " الترتيب عالميا",
+    "count_1": "عدد التخصصات", 
+    "start_price": "تبدأ الاسعار",
+    "discount": "الخصم",
+    "takh": "تخصصات",
+    "from": "من",
+    "to": "الى",
+    "links": {
+      "all": "الكل",
+      "privateUniversities": "الجامعات الخاصة",
+      "internationalUniversities": "جامعات الدولية",
+      "cyprusUniversities": "جامعات قبرص"
+    },
+    "mostRanked": "الأكثر تصنيفاً",
+    "topMajors": "أهم التخصصات",
+    "universityInfo": {
+      "name": "جامعة ابن خلدون",
+      "description": "هذا يعزز من فرص الطالب في الحصول على وظائف مرموقة أو متابعة الدراسات العليا في مؤسسات تعليمية ومعترف بها حول العالم.",
+      "establishmentYear": "سنة التأسيس",
+      "ranking": "الترتيب العالمي",
+      "rankingNumber": "5746",
+      "establishedYearValue": "2020",
+      "majors": {
+        "humanSciences": "العلوم الإنسانية",
+        "medicine": "الطب البشري",
+        "computerEngineering": "هندسة الحاسوب",
+        "pharmacy": "الصيدلة"
+      },
+      "startingPrices": "تبدأ الأسعار",
+      "priceRange": {
+        "from": "من",
+        "to": "الى"
+      },
+      "registerNow": "سجل الآن"
+    },
+    "show_more": "مشاهدة المزيد"
+  },
+  "partial_scholarships": {
+    "title": "المنح الجزئية",
+    "overview":"لمحة عامة",
+    "filter_text": "الفلاتر",
+    "university": "جامعة ميدبول",
+    "years_1": "سنة التأسيس",
+    "years_2": "الترتيب محليا",
+    "rank_1": " الترتيب عالميا",
+    "count_1": "عدد التخصصات",
+    "start_price": "تبدأ الاسعار",
+    "discount": "الخصم",
+    "takh": "تخصصات",
+    "from": "من",
+    "to": "الى",
+    "notFound": "غير موجود",
+    "specialization": {
+      "label": "التخصص",
+      "option1": " هندسة الحاسوب",
+      "option2": " هندسة الحاسوب",
+      "option3": " هندسة الحاسوب",
+      "option4": " هندسة الحاسوب"
+    },
+    "language": {
+      "label": "لغة الدراسة",
+      "value": "الإنجليزية"
+    },
+    "buttons": {
+      "view_university": "عرض الجامعة",
+      "register_scholarship": "سجل في المنحة الآن"
+    },
+    "show_more": "اظهار المزيد",
+    "level": {
+      "label": "المستوى الأكاديمي"
+    },
+    "city": {
+      "label": "المدينة"
+    },
+    "study_years": {
+      "label": "عدد سنوات الدراسة"
+    },
+    "fees": {
+      "label": "الرسوم",
+      "before": "الرسوم قبل الخصم",
+      "after": "الرسوم بعد الخصم",
+      "annual": "الرسوم السنوية",
+      "total": "إجمالي الرسوم"
+    }
+  },
+  "university_details": {
+    "title": "جامعات",
+    "years_1": "سنة التأسيس",
+    "years_2": "الترتيب محليا",
+    "rank_1": " الترتيب عالميا",
+    "count_1": "عدد التخصصات",
+    "start_price": "تبدأ الاسعار",
+    "discount": "الخصم",
+    "takh": "تخصصات",
+    "tasnif": "التصنيف",
+    "from": "من",
+    "to": "الى",
+    "card": {
+      "table": "جدول المحتويات",
+      "why": "ماذا عن",
+      "details":"تفاصيل"
+    },
+    "links": {
+      "university_photos": "صور الجامعة",
+      "study_features": "مميزات الدراسة في الجامعة",
+      "recognitions": "الاعترافات الحاصلة",
+      "university_numbers": "الجامعة بأرقام",
+      "university_specializations": "تخصصات الجامعة",
+      "university_accreditations": "اعتمادات الجامعة",
+      "university_languages": "لغات الجامعة",
+      "university_Terms": "شروط التقديم",
+      "university_details": "تفاصيل اكثر",
+      "university_faqs": "الاسئلة الشائعة"
+    },
+    "university": {
+      "info": "معلومات عن",
+      "foundedIn": "تأسست في",
+      "numbers": "بألارقام",
+      "globalRank": "التصنيف العالمي",
+      "languages": "اللغات",
+      "localRank": "الترتيب المحلي",
+      "staff": "طاقم الجامعة",
+      "studentsCount": "عدد الطلاب",
+      "nationalityCount": "جنسية مختلفة",
+      "video": "فيديو تعريفي عن",
+      "photo": "صور عن الجامعة",
+      "features": "مميزات الدراسة في",
+      "studentHousings": "احرم الجامعة وأماكن تواجدها",
+      "languagesStudy": "لغات التدريس في",
+      "languagesStudyAvailable": "تتيج",
+      "languagesStudyMoreLanguages": "فرصة الدراسة بالعديد من اللغات",
+      "faqs": "سؤال وجواب عن الجامعة",
+      "confessions": "الاعترافات الحاصلة عليها الجامعة"
+    },
+    "tabs": {
+      "studyPrograms": "التخصصات الدراسية",
+      "studentHousing": "سكن الطلاب",
+      "majors": "التخصصات",
+      "studyYears": "سنوات الدراسة",
+      "studyLanguage": "لغة الدراسة",
+      "tuitionFee": "القسط",
+      "registration": "التسجيل",
+      "years": "سنوات"
+    },
+    "studyPrograms": {
+      "programs": "البرامج",
+      "studyYears": "سنوات الدراسة",
+      "language": "لغة الدراسة",
+      "fees": "الرسوم",
+      "annualFees": "الرسوم السنوية",
+      "grantAvailable": "منحة متاحة"
+    },
+    "housing": {
+      "capacity": "السعة",
+      "price": "السعر",
+      "beds": "الأسرّة",
+      "meals": "الوجبات",
+      "internet": "الإنترنت"
+    },
+    "specifications": {
+      "title": "مواصفات الجامعة"
+    },
+    "description": "تفاصيل اكثر عن ",
+    "readMore": "عرض المزيد",
+    "readLess": "عرض اقل",
+    "howTo": "كيفية التقديم في ",
+    "Time": "مواعيد التسجيل في ",
+    "booking_now": "سجل الان"
+  },
+  "housing": {
+    "titlePage": "السكنات الطلابية",
+    "housing": "السكن",
+    "city": "المدينة",
+    "capacity": "السعة",
+    "beds": "عدد الأسرة",
+    "meals": "عدد الوجبات",
+    "internet": "الإنترنت",
+    "price": "السعر",
+    "type": "النوع",
+    "no_image": "لا توجد صورة",
+    "see_details": "عرض التفاصيل",
+    "viewImage": "عرض الصور",
+    "register": "تسجيل",
+    "male": "سكن بنين",
+    "female": "سكن اناث"
+  },
+  "breadcrumb": {
+    "Home": "الرئيسية",
+    "turkish-universities": "جامعات تركيا",
+    "cyprus-universities": "جامعات قبرص",
+    "universities": "تفاصيل الجامعة",
+    "partial-scholarships": "المنح الجزئية",
+    "blogs": "المدونة",
+    "student-accommodation": "السكنات الطلابية",
+    "services": "خدماتنا"
+  },
+  "blogs": {
+    "title": "المدونة - أخر الاخبار",
+    "search": "ابحث",
+    "links": {
+      "study_in_turkey": "الدراسة في تركيا",
+      "living_in_turkey": "المعيشة في تركيا",
+      "university_specialties": "التخصصات الجامعية",
+      "distance_study": "الدراسة عن بعد",
+      "turkish_scholarships": "المنح التركية",
+      "self_development": "تطوير الذات",
+      "all": "الكل"
+    },
+    "most_visited": "الأكثر زيارة",
+    "slide": {
+      "university_accreditations": "إليك كافة اعتمادات جامعة ايدن - تعرف عليها الآن",
+      "enhance_opportunities": "هذا يعزز من فرص الطالب في الحصول على وظائف مرموقة أو متابعة الدراسات العليا في مؤسسات تعليمية ومعترف بها حول العالم"
+    },
+    "read_more": "قراءة المزيد",
+    "show_more": "مشاهدة المزيد",
+    "show_less": "مشاهدة اقل"
+  },
+  "followup_request": {
+    "tracking_title": "متابعة الطلب",
+    "enter_code": "أدخل رمز الطلب",
+    "code_require": "الكود مطلوب",
+    "submit_button": "إرسال",
+
+    "title": "متابعة طلب تسجيل",
+    "id": "الرقم التعريفي",
+    "code": "الرمز",
+    "first_name": "الاسم الأول",
+    "last_name": "الاسم الأخير",
+    "country": "الدولة",
+    "gender": "الجنس",
+    "email": "البريد الإلكتروني",
+    "phone_number": "رقم الهاتف",
+    "degree_level": "المستوى الدراسي",
+    "language": "اللغة",
+    "specialization": "التخصص",
+    "preferred_universities": "الجامعات المفضلة",
+    "message_text": "نص الرسالة",
+    "created_at": "تاريخ الإنشاء",
+    "updated_at": "تاريخ التحديث"
+  },
+  "services": {
+    "titlePage": "خدماتنا",
+    "links": {
+      "all": "الكل"
+    },
+    "sectionText": " احصل علي خصومات حصرية وخاصة في حال تم التسجيل من خلالنا",
+    "sectionText2": "احصل علي قبولك في الجامعات الخاصة مجانا وخلال 24 ساعة فقط",
+    "post_admission_services": "خدمات ما بعد القبول",
+    "sectionButton": "سجل الان",
+    "contactUs": {
+      "title": "سجل معنا الان",
+      "subtitle": "دعنا نتواصل معك نحن متواجدون على",
+      "hour": "مدار الساعة",
+      "points": {
+        "a": "يمكنك الاستعانة بأحد أعضاء فريقنا لتبدأ مشوارك الأكاديمي بنجاح.",
+        "b": "مهما كان استفسارك، تأكد من أننا سنقدم لك الاستشارة مجانًا.",
+        "c": "نضمن القبول في أفضل الجامعات التركية.",
+        "d": "ملتزمون بتقديم خدماتنا بأفضل طريقة.",
+        "e": "نرسم مستقبلك الأكاديمي وندعمك حتى الاستقرار."
+      }
+    }
+  },
+  "translation": {
+    "h1": "عربي",
+    "title": "Hauptseite",
+    "to-client-page": "Zur client seitigen Seite",
+    "to-second-page": "Zur zweiten Seite",
+    "welcome": "Willkommen ZU Next.js 13/14 <1>mit den neuen App-Verzeichnisfunktionen</1> und i18next",
+    "blog": {
+      "text": "Schau dir den entsprechenden <1>Blogeintrag</1> dieses Beispiels an.",
+      "link": "https://locize.com/blog/next-app-dir-i18n/"
+    }
+  },
+  "program": {
+    "title": "البرامج والتخصصات",
+    "notFound": "غير موجود",
+    "show_more": "مشاهدة المزيد",
+    "overview": "لمحة عامة",
+    "filterWord": "قم بالفلترة للبحث عن الجامعات",
+    "w": "وجدنا لك",
+    "w2": "جامعة تناسبك",
+    "search": "ابحث"
+  },
+  "pagination": {
+    "next": "التالي",
+    "previous": "السابق"
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "description": "لا تتردد في التواصل معنا لأي استفسار أو مساعدة. نحن هنا للمساعدة!",
+    "email": {
+      "label": "البريد الإلكتروني",
+      "value": "contact@yourcompany.com"
+    },
+    "address": {
+      "label": "العنوان",
+      "value": "123 الشارع الرئيسي، سيتي فيل"
+    },
+    "form": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "message": "الرسالة",
+      "submit": "أرسل الرسالة",
+      "mobile": "رقم الهاتف",
+      "title": "عنوان الموضوع",
+      "address": "العنوان",
+      "validation": {
+        "name": "الاسم مطلوب",
+        "email": {
+          "required": "البريد الإلكتروني مطلوب",
+          "invalid": "البريد الإلكتروني غير صحيح"
+        },
+        "address": "العنوان مطلوب",
+        "mobile": "رقم الهاتف مطلوب",
+        "title": "عنوان الموضوع مطلوب",
+        "message": "الرسالة مطلوبة"
+      }
+    }
+  },
+  "blogDetails": {
+    "title": "الأخبار",
+    "Published": "منشور في",
+    "author": "تحرير بواسطة",
+    "date": "تاريخ التحديث",
+    "talk": "تحدث مع مستشارك التعليمي",
+    "btnTalk": "احجز مكالمة الآن"
+  },
+  "smallCard" :{
+    "university": "جامعة"
+  }
+}

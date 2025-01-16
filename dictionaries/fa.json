@@ -1,0 +1,547 @@
+{
+  "Header": {
+    "be_our_agent": "نماینده ما باشید",
+    "follow_up_on_the_registration_request": "پیگیری درخواست ثبت نام",
+    "search_for_the_university": "جستجوی دانشگاه",
+    "booking_btn": "یک صندلی رزرو کنید",
+    "home": "صفحه اصلی",
+    "blog": "وبلاگ",
+    "about_us": "ما کی هستیم؟",
+    "contact_us": "با ما تماس بگیرید",
+    "turkish_universities": "دانشگاه های ترکیه",
+    "cyprus_universities": "دانشگاه های قبرس",
+    "student_accommodation": "مسکن دانشجویی",
+    "partial_scholarships": "کمک های مالی جزئی",
+    "programs": "همه برنامه ها",
+    "opportunities": "فرصت ها",
+    "services": "خدمات ما",
+    "search_university": "جستجوی دانشگاه",
+    "register_now": "همین الان ثبت نام کنید",
+    "steps_to_register": "مراحل ثبت نام در دانشگاه ها",
+    "first_arab_site": "اولین وب سایت عربی تخصصی در زمینه مطالعات",
+    "in_turkey_for_arab_students": "در ترکیه برای دانشجویان عرب",
+    "about_itqan": "در مورد مسترینگ"
+  },
+  "layOutFixed": {
+    "drawer": {
+      "register_now": "همین الان ثبت نام کنید",
+      "personal_info": "اطلاعات شخصی",
+      "name": "نام",
+      "surname": "عنوان",
+      "country_of_residence": "کشور محل اقامت",
+      "gender": "جنسیت",
+      "email": "ایمیل",
+      "phone_number": "شماره تلفن",
+      "university_info": "اطلاعات رشته و دانشگاه",
+      "select_degree": "مدرک دانشگاهی خود را انتخاب کنید",
+      "select_language": "زبان را انتخاب کنید",
+      "select_specialization": "تخصص خود را انتخاب کنید",
+      "select_universities": "دانشگاه هایی را که می خواهید بپیوندید انتخاب کنید",
+      "message_text": "متن پیام",
+      "message_content": "متن پیام",
+      "name_required": "نام مورد نیاز",
+      "surname_required": "عنوان مورد نیاز",
+      "country_required": "کشور محل اقامت الزامی است",
+      "gender_required": "رابطه جنسی لازم است",
+      "email_required": "ایمیل مورد نیاز است",
+      "invalid_email": "ایمیل نامعتبر است",
+      "phone_required": "شماره تلفن لازم است",
+      "select_degree_required": "مدرک دانشگاهی الزامی است",
+      "select_language_required": "زبان مورد نیاز است",
+      "select_specialization_required": "تخصص لازم است",
+      "select_universities_required": "دانشگاه ها الزامی است",
+      "message_required": "محتوای پیام الزامی است",
+      "submitting": "ثبت نام در حال انجام است",
+      "btnCopy": "کد را کپی کنید",
+      "followup_request": "پیگیری سفارش",
+      "close": "لغو"
+    }
+  },
+  "Footer": {
+    "siteName": "برای تسلط آموزشی",
+    "copyright": "تمامی حقوق محفوظ است",
+    "home": "صفحه اصلی",
+    "aboutUs": "ما کی هستیم؟",
+    "contactUs": "با ما تماس بگیرید",
+    "majors": "تخصص ها",
+    "services": "خدمات ما",
+    "links": "لینک های مرتبط",
+    "address": "استانبول - فاتح - ایستگاه هتل زاده",
+    "bio": "یک شرکت مشاوره تحصیلی پیشرو در زمینه ثبت نام دانشجو در دانشگاه ها، مدارس بین المللی و موسسات زبان ترکیه.",
+    "LinkApps": "لینک های دیگر",
+    "TOS": "شرایط خدمات",
+    "agents": "عوامل",
+    "privacyPolicy": "سیاست حفظ حریم خصوصی"
+  },
+  "home": {
+    "years_1": "سال تاسیس",
+    "years_2": "رتبه بندی محلی",
+    "rank_1": " رتبه بندی جهانی",
+    "count_1": "تعداد رشته های تخصصی",
+    "start_price": "شروع قیمت ها",
+    "discount": "حریف",
+    "takh": "تخصص ها",
+    "from": "از",
+    "to": "به",
+    "topMajors": "مهمترین تخصص ها",
+    "filter": "فیلترها",
+    "hero": {
+      "title": "اولین وب سایت عربی تخصصی در زمینه مطالعات",
+      "subtitle": "در ترکیه برای دانشجویان عرب",
+      "register_now": "همین الان ثبت نام کنید",
+      "steps": "مراحل ثبت نام در دانشگاه ها",
+      "choose_study": "برای تحصیل در ترکیه را انتخاب کنید",
+      "select_specialty": "تخصص خود را انتخاب کنید",
+      "select_years": "مدت زمان تحصیل را انتخاب کنید",
+      "select_none": "انتخاب شده است",
+      "select_study_level": "سطح مطالعه خود را انتخاب کنید",
+      "select_language": "زبان مطالعه را انتخاب کنید",
+      "select_country": "کشور را انتخاب کنید",
+      "select_cost": "هزینه تحصیل را انتخاب کنید",
+      "down": "حداقل",
+      "up": "حداکثر",
+      "cost": "هزینه",
+      "select_country_free": "کشورهای در دسترس",
+      "search": "جستجو کنید",
+      "english": "انگلیسی",
+      "turkish": "ترکی",
+      "arabic": "عربی",
+      "master": "کارشناسی ارشد",
+      "bachelor": "مدرک لیسانس",
+      "medcant": "دارو",
+      "engeneer": "مهندسی"
+    },
+    "videoCall": {
+      "text": "با مشاور آموزشی خود تماس تصویری درخواست کنید",
+      "booking_now": "اکنون تماس بگیرید"
+    },
+    "specialties": {
+      "title": "مهمترین تخصص ها"
+    },
+    "best_universities": {
+      "title": "بهترین دانشگاه های ترکیه"
+    },
+    "best_universitiesTwo": {
+      "title": "بهترین دانشگاه های قبرس"
+    },
+    "whyItqan": {
+      "title": "چرا ایتقان؟",
+      "p1": "این متن نمونه ای از متن است که می تواند در همان فضا جایگزین شود.",
+      "p2": "این متن نمونه ای از متن است که می تواند در همان فضا جایگزین شود.",
+      "p3": "این متن نمونه ای از متن است که می تواند در همان فضا جایگزین شود.",
+      "p4": "این متن نمونه ای از متن است که می تواند در همان فضا جایگزین شود."
+    },
+    "WhatService": {
+      "title": "ایتقان چه چیزی را ارائه می دهد؟",
+      "title2": "اگر از طریق آن ثبت نام کرده اید",
+      "read_more": "بیشتر ببینید"
+    },
+    "form_booking": {
+      "title": "فرم درخواست از طریق ایتقان",
+      "name": "نام",
+      "email": "ایمیل",
+      "mobile_w": "شماره واتساپ",
+      "submit": "همین الان ثبت نام کنید",
+      "loading": "ثبت نام در حال انجام است",
+      "name_required": "نام مورد نیاز",
+      "email_required": "ایمیل مورد نیاز است",
+      "mobile_w_required": "شماره واتساپ الزامی است",
+      "email_invalid": "ایمیل نامعتبر است",
+      "mobile_w_invalid": "شماره واتساپ نامعتبر است"
+    },
+    "numbers": {
+      "title": "تسلط آموزشی",
+      "title2": "اعداد و آمار",
+      "itqan_studens_count": "تعداد دانشجویان ایتقان در دانشگاه های ترکیه",
+      "universities_count": "تعداد دانشگاه های خصوصی در ترکیه",
+      "experience_count": "سالها تجربه",
+      "international_student_count": "تعداد دانشجویان بین المللی و خارجی در ترکیه",
+      "consultation_count": "تعداد مشاوره دانشجویی"
+    },
+    "moth": {
+      "title2": "دارای گواهی قابل اعتماد",
+      "title": "یکی از بهترین دانشگاه های ترکیه"
+    },
+    "steps": {
+      "title": "ثبت نام دانشگاه",
+      "title2": "مراحل",
+      "read_more": "ادامه مطلب"
+    },
+    "blogs": {
+      "title": "مرکز مقالات و اطلاعات",
+      "read_more": "ادامه مطلب"
+    },
+    "stories": {
+      "title": "دانش آموزان آموزشی ایتقان",
+      "title2": "داستان ها و شهادت ها",
+      "title3": "نظرات و نظرات دانش آموزان و اولیا"
+    }
+  },
+  "turkish_universities": {
+    "title": "دانشگاه های ترکیه",
+    "links": {
+      "all": "همه",
+      "istanbulEuropean": "دانشگاه های اروپایی در استانبول",
+      "istanbulAsian": "دانشگاه های آسیایی استانبول",
+      "ankara": "دانشگاه های آنکارا",
+      "mersin": "دانشگاه های مرسین",
+      "gaziantep": "دانشگاه های غازیانتاب"
+    },
+    "mostRanked": "بیشترین امتیاز",
+    "topMajors": "مهمترین تخصص ها",
+    "universityInfo": {
+      "name": "دانشگاه ابن خلدون",
+      "description": "این امر شانس دانشجو را برای به دست آوردن مشاغل معتبر یا ادامه تحصیلات تکمیلی در موسسات آموزشی معتبر در سراسر جهان افزایش می دهد.",
+      "establishmentYear": "سال تاسیس",
+      "ranking": "رتبه بندی جهانی",
+      "rankingNumber": "5746",
+      "establishedYearValue": "2020",
+      "majors": {
+        "humanSciences": "علوم انسانی",
+        "medicine": "طب انسانی",
+        "computerEngineering": "مهندسی کامپیوتر",
+        "pharmacy": "داروخانه"
+      },
+      "startingPrices": "شروع قیمت ها",
+      "priceRange": {
+        "from": "از",
+        "to": "به"
+      },
+      "registerNow": "همین الان ثبت نام کنید"
+    },
+    "show_more": "مشاهده بیشتر"
+  },
+  "cypriot_universities": {
+    "title": "دانشگاه های قبرس",
+    "years_1": "سال تاسیس",
+    "years_2": "رتبه بندی محلی",
+    "rank_1": " رتبه بندی جهانی",
+    "count_1": "تعداد رشته های تخصصی",
+    "start_price": "شروع قیمت ها",
+    "discount": "حریف",
+    "takh": "تخصص ها",
+    "from": "از",
+    "to": "به",
+    "links": {
+      "all": "همه",
+      "privateUniversities": "دانشگاه های خصوصی",
+      "internationalUniversities": "دانشگاه های بین المللی",
+      "cyprusUniversities": "دانشگاه های قبرس"
+    },
+    "mostRanked": "بیشترین امتیاز",
+    "topMajors": "مهمترین تخصص ها",
+    "universityInfo": {
+      "name": "دانشگاه ابن خلدون",
+      "description": "این امر شانس دانشجو را برای به دست آوردن مشاغل معتبر یا ادامه تحصیلات تکمیلی در موسسات آموزشی معتبر در سراسر جهان افزایش می دهد.",
+      "establishmentYear": "سال تاسیس",
+      "ranking": "رتبه بندی جهانی",
+      "rankingNumber": "5746",
+      "establishedYearValue": "2020",
+      "majors": {
+        "humanSciences": "علوم انسانی",
+        "medicine": "طب انسانی",
+        "computerEngineering": "مهندسی کامپیوتر",
+        "pharmacy": "داروخانه"
+      },
+      "startingPrices": "شروع قیمت ها",
+      "priceRange": {
+        "from": "از",
+        "to": "به"
+      },
+      "registerNow": "همین الان ثبت نام کنید"
+    },
+    "show_more": "مشاهده بیشتر"
+  },
+  "partial_scholarships": {
+    "title": "کمک های مالی جزئی",
+    "overview": "نمای کلی",
+    "filter_text": "فیلترها",
+    "university": "دانشگاه مدپول",
+    "years_1": "سال تاسیس",
+    "years_2": "رتبه بندی محلی",
+    "rank_1": " رتبه بندی جهانی",
+    "count_1": "تعداد رشته های تخصصی",
+    "start_price": "شروع قیمت ها",
+    "discount": "حریف",
+    "takh": "تخصص ها",
+    "from": "از",
+    "to": "به",
+    "notFound": "در دسترس نیست",
+    "specialization": {
+      "label": "تخصص",
+      "option1": " مهندسی کامپیوتر",
+      "option2": " مهندسی کامپیوتر",
+      "option3": " مهندسی کامپیوتر",
+      "option4": " مهندسی کامپیوتر"
+    },
+    "language": {
+      "label": "زبان مطالعه",
+      "value": "انگلیسی"
+    },
+    "buttons": {
+      "view_university": "دانشگاه را مشاهده کنید",
+      "register_scholarship": "اکنون برای بورسیه ثبت نام کنید"
+    },
+    "show_more": "نمایش بیشتر",
+    "level": {
+      "label": "سطح علمی"
+    },
+    "city": {
+      "label": "شهر"
+    },
+    "study_years": {
+      "label": "تعداد سال های تحصیل"
+    },
+    "fees": {
+      "label": "هزینه ها",
+      "before": "هزینه ها قبل از تخفیف است",
+      "after": "هزینه بعد از تخفیف",
+      "annual": "هزینه های سالیانه",
+      "total": "مجموع هزینه ها"
+    }
+  },
+  "university_details": {
+    "title": "دانشگاه ها",
+    "years_1": "سال تاسیس",
+    "years_2": "رتبه بندی محلی",
+    "rank_1": " رتبه بندی جهانی",
+    "count_1": "تعداد رشته های تخصصی",
+    "start_price": "شروع قیمت ها",
+    "discount": "حریف",
+    "takh": "تخصص ها",
+    "tasnif": "طبقه بندی",
+    "from": "از",
+    "to": "به",
+    "card": {
+      "table": "فهرست مطالب",
+      "why": "چه در مورد",
+      "details": "جزئیات"
+    },
+    "links": {
+      "university_photos": "تصاویر دانشگاه",
+      "study_features": "مزایای تحصیل در دانشگاه",
+      "recognitions": "اعترافات انجام شده",
+      "university_numbers": "دانشگاه در اعداد",
+      "university_specializations": "تخصص های دانشگاهی",
+      "university_accreditations": "اعتبارات دانشگاه",
+      "university_languages": "زبان های دانشگاهی",
+      "university_Terms": "شرایط درخواست",
+      "university_details": "جزئیات بیشتر",
+      "university_faqs": "سوالات متداول"
+    },
+    "university": {
+      "info": "اطلاعات در مورد",
+      "foundedIn": "تاسیس شده در",
+      "numbers": "در اعداد",
+      "globalRank": "رتبه بندی جهانی",
+      "languages": "زبان ها",
+      "localRank": "رتبه بندی محلی",
+      "staff": "کارکنان دانشگاه",
+      "studentsCount": "تعداد دانش آموزان",
+      "nationalityCount": "ملیت متفاوت",
+      "video": "ویدیوی معرفی در مورد",
+      "photo": "عکس هایی در مورد دانشگاه",
+      "features": "مزایای تحصیل در",
+      "studentHousings": "محوطه دانشگاه و مکان های آن",
+      "languagesStudy": "زبان های آموزشی در",
+      "languagesStudyAvailable": "Tteg",
+      "languagesStudyMoreLanguages": "فرصتی برای تحصیل به زبان های مختلف",
+      "faqs": "پرسش و پاسخ در مورد دانشگاه",
+      "confessions": "تقدیرنامه های کسب شده توسط دانشگاه"
+    },
+    "tabs": {
+      "studyPrograms": "رشته های دانشگاهی",
+      "studentHousing": "مسکن دانشجویی",
+      "majors": "تخصص ها",
+      "studyYears": "سال های تحصیل",
+      "studyLanguage": "زبان مطالعه",
+      "tuitionFee": "قسطی",
+      "registration": "ثبت نام",
+      "years": "سال"
+    },
+    "studyPrograms": {
+      "programs": "برنامه ها",
+      "studyYears": "سال های تحصیل",
+      "language": "زبان مطالعه",
+      "fees": "هزینه ها",
+      "annualFees": "هزینه های سالیانه",
+      "grantAvailable": "کمک هزینه در دسترس است"
+    },
+    "housing": {
+      "capacity": "ظرفیت",
+      "price": "قیمت",
+      "beds": "تخت",
+      "meals": "وعده های غذایی",
+      "internet": "اینترنت"
+    },
+    "specifications": {
+      "title": "مشخصات دانشگاه"
+    },
+    "description": "جزئیات بیشتر در مورد ",
+    "readMore": "نمایش بیشتر",
+    "readLess": "کمتر پیشنهاد دهید",
+    "howTo": "نحوه درخواست در ",
+    "Time": "تاریخ های ثبت نام برای ",
+    "booking_now": "همین الان ثبت نام کنید"
+  },
+  "housing": {
+    "titlePage": "مسکن دانشجویی",
+    "housing": "مسکن",
+    "city": "شهر",
+    "capacity": "ظرفیت",
+    "beds": "تعداد تخت",
+    "meals": "تعداد وعده های غذایی",
+    "internet": "اینترنت",
+    "price": "قیمت",
+    "type": "تایپ کنید",
+    "no_image": "هیچ عکسی وجود ندارد",
+    "see_details": "مشاهده جزئیات",
+    "viewImage": "مشاهده عکس ها",
+    "register": "ثبت نام",
+    "male": "مسکن پسران",
+    "female": "مسکن زنانه"
+  },
+  "breadcrumb": {
+    "Home": "صفحه اصلی",
+    "turkish-universities": "دانشگاه های ترکیه",
+    "cyprus-universities": "دانشگاه های قبرس",
+    "universities": "جزئیات دانشگاه",
+    "partial-scholarships": "کمک های مالی جزئی",
+    "blogs": "وبلاگ",
+    "student-accommodation": "مسکن دانشجویی",
+    "services": "خدمات ما"
+  },
+  "blogs": {
+    "title": "وبلاگ - آخرین اخبار",
+    "search": "جستجو کنید",
+    "links": {
+      "study_in_turkey": "تحصیل در ترکیه",
+      "living_in_turkey": "زندگی در ترکیه",
+      "university_specialties": "رشته های دانشگاهی",
+      "distance_study": "آموزش از راه دور",
+      "turkish_scholarships": "بورسیه تحصیلی ترکیه",
+      "self_development": "توسعه خود",
+      "all": "همه"
+    },
+    "most_visited": "بیشترین بازدید",
+    "slide": {
+      "university_accreditations": "در اینجا همه اعتبارنامه های دانشگاه آیدن آمده است - اکنون در مورد آنها بیاموزید",
+      "enhance_opportunities": "این امر شانس دانشجو را برای به دست آوردن مشاغل معتبر یا ادامه تحصیلات تکمیلی در موسسات آموزشی معتبر در سراسر جهان افزایش می دهد."
+    },
+    "read_more": "ادامه مطلب",
+    "show_more": "مشاهده بیشتر",
+    "show_less": "کمتر مشاهده کنید"
+  },
+  "followup_request": {
+    "tracking_title": "درخواست را پیگیری کنید",
+    "enter_code": "کد سفارش را وارد کنید",
+    "code_require": "کد مورد نیاز است",
+    "submit_button": "ارسال کنید",
+    "title": "پیگیری درخواست ثبت نام",
+    "id": "شماره شناسایی",
+    "code": "نماد",
+    "first_name": "نام کوچک",
+    "last_name": "نام خانوادگی",
+    "country": "ایالت",
+    "gender": "جنسیت",
+    "email": "ایمیل",
+    "phone_number": "شماره تلفن",
+    "degree_level": "سطح علمی",
+    "language": "زبان",
+    "specialization": "تخصص",
+    "preferred_universities": "دانشگاه های مورد نظر",
+    "message_text": "متن پیام",
+    "created_at": "تاریخ ایجاد",
+    "updated_at": "تاریخ به روز رسانی"
+  },
+  "services": {
+    "titlePage": "خدمات ما",
+    "links": {
+      "all": "همه"
+    },
+    "sectionText": " از تخفیف های انحصاری برخوردار شوید، به خصوص اگر از طریق ما ثبت نام کنید",
+    "sectionText2": "پذیرش در دانشگاه های خصوصی را به صورت رایگان و تنها در عرض 24 ساعت دریافت کنید",
+    "post_admission_services": "خدمات پس از پذیرش",
+    "sectionButton": "همین الان ثبت نام کنید",
+    "contactUs": {
+      "title": "همین الان با ما ثبت نام کنید",
+      "subtitle": "اجازه دهید با شما تماس بگیریم ما در دسترس هستیم",
+      "hour": "شبانه روزی",
+      "points": {
+        "a": "برای شروع موفقیت آمیز سفر تحصیلی خود می توانید از یکی از اعضای تیم ما کمک بگیرید.",
+        "b": "هر سوالی که دارید، مطمئن باشید که ما مشاوره رایگان به شما ارائه خواهیم کرد.",
+        "c": "ما پذیرش در بهترین دانشگاه های ترکیه را تضمین می کنیم.",
+        "d": "ما متعهد هستیم که خدمات خود را به بهترین شکل ارائه دهیم.",
+        "e": "ما آینده تحصیلی شما را ترسیم می کنیم و تا ثبات از شما حمایت می کنیم."
+      }
+    }
+  },
+  "translation": {
+    "h1": "عرب",
+    "title": "Hauptseite",
+    "to-client-page": "به سایت مشتری مراجعه کنید",
+    "to-second-page": "لطفا به ما سر بزنید",
+    "welcome": "Willkommen ZU Next.js 13/14 <1>با استفاده از این اپلیکیشن، لطفا روی لینک زیر کلیک کنید</1> و i18 بعدی",
+    "blog": {
+      "text": "لطفا زیر را ببینید <1>Blogeintrag</1> Dieses Beispiels an.",
+      "link": "https://locize.com/blog/next-app-dir-i18n/"
+    }
+  },
+  "program": {
+    "title": "برنامه ها و تخصص ها",
+    "notFound": "در دسترس نیست",
+    "show_more": "مشاهده بیشتر",
+    "overview": "نمای کلی",
+    "filterWord": "برای جستجوی دانشگاه ها فیلتر کنید",
+    "w": "پیدات کردیم",
+    "w2": "دانشگاهی که مناسب شماست",
+    "search": "جستجو کنید"
+  },
+  "pagination": {
+    "next": "بعدی",
+    "previous": "قبلی"
+  },
+  "contact": {
+    "title": "با ما تماس بگیرید",
+    "description": "دریغ نکنید برای هرگونه سوال یا کمک با ما تماس بگیرید. ",
+    "email": {
+      "label": "ایمیل",
+      "value": "contact@yourcompany.com"
+    },
+    "address": {
+      "label": "آدرس",
+      "value": "خیابان اصلی 123، سیتی ویل"
+    },
+    "form": {
+      "name": "نام",
+      "email": "ایمیل",
+      "message": "پیام",
+      "submit": "پیام را ارسال کنید",
+      "mobile": "شماره تلفن",
+      "title": "عنوان موضوع",
+      "address": "آدرس",
+      "validation": {
+        "name": "نام مورد نیاز",
+        "email": {
+          "required": "ایمیل مورد نیاز است",
+          "invalid": "ایمیل نادرست است"
+        },
+        "address": "آدرس مورد نیاز است",
+        "mobile": "شماره تلفن لازم است",
+        "title": "عنوان موضوع الزامی است",
+        "message": "پیام لازم است"
+      }
+    }
+  },
+  "blogDetails": {
+    "title": "اخبار",
+    "Published": "منتشر شده در",
+    "author": "ویرایش توسط",
+    "date": "تاریخ به روز رسانی",
+    "talk": "با مشاور آموزشی خود صحبت کنید",
+    "btnTalk": "اکنون تماس بگیرید"
+  },
+  "smallCard": {
+    "university": "دانشگاه"
+  }
+}

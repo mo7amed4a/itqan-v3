@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+[dir="rtl"] [class*="space-x"] > :not(template) ~ :not(template) {
+  --space-x-reverse: 0 !important;
+  margin-left: calc(1rem * var(--space-x-reverse)) !important;
+  margin-right: calc(1rem * calc(1 - var(--space-x-reverse))) !important;
+}
+
+body {
+  font-family: Tajawal;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: right;
+  background-color: #f5f7f9;
+}
+.bg-hero {
+  /* background: url(../../public/images/home-hero.png); */
+  @apply bg-cover bg-bottom;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-bullet ul li {
+  @apply relative ps-6 before:absolute before:-start-1 before:top-1 md:before:top-2 before:rounded-full before:size-3 before:bg-primary
+}
+
+ul.custom-bullet li {
+  @apply relative ps-6 before:absolute before:-start-1 before:top-1 md:before:top-2 before:rounded-full before:size-3 before:bg-secondary
+}
+
+ul.custom-bullet-university li {
+  @apply relative ps-3 before:absolute before:-start-1 before:top-1 md:before:top-2 before:rounded-full before:size-1.5 before:bg-secondary
+}
+
+.list {
+  @apply relative ps-2 before:absolute before:-start-1 before:top-1.5 before:rounded-full before:w-1.5 before:h-1.5 before:bg-secondary
+}
+
+.shadow-all:hover {
+  box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.25);
+  /* @apply hover:shadow-[0_6px_8px_-2px_rgba(0,0,0,0.1),0_-6px_8px_-2px_rgba(0,0,0,0.1),6px_0_8px_-2px_rgba(0,0,0,0.1),-6px_0_8px_-2px_rgba(0,0,0,0.1)] */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 178, 60%, 32%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 15, 86%, 51%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    line-height : 1.35 !important;
+    @apply bg-background text-foreground;
+  }
+}
+
+
+.data-\[state\=active\]\:text-foreground[data-state="active"] {
+  @apply !bg-transparent border-b-2 border-secondary !text-secondary rounded-none
+}
+
+
+.focus\:border-cyan-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(33, 131, 127) !important
+}
+
+.focus\:ring-cyan-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(33, 131, 127)
+}
+
+
+.discount-badge {
+  background-color: #f16529;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.discount-badge::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f16529;
+}
+
+
+[role="tab"][aria-selected="true"] {
+  @apply !bg-secondary !text-white border rounded-full px-3 py-1.5
+}
+
+.prose a:not([href*="#"]) {
+  @apply text-secondary font-bold no-underline hover:underline
+}
+
+#main-toc[name="tableOfContents"] {
+  @apply !text-primary
+}
+
+.prose a[href^="#"] {
+  @apply !border-primary border-s-4 h-auto text-sm bg-gray-100 p-1 rounded-e text-gray-600 ps-2 no-underline hover:text-secondary
+}
+
+
+.prose #table {
+  @apply relative w-full overflow-x-auto
+}
+
+.blog .prose {
+  @apply !space-y-0
+}
+
+.blog .prose h2 {
+  @apply !pt-8 text-primary
+}
+
+.blog .prose p {
+  @apply my-1 py-1
+}
+
+.blog .prose img {
+  @apply !w-full
+}
+
+.blog .prose h2 {
+  @apply w-full
+}
+
+.prose blockquote {
+  @apply !not-italic
+}

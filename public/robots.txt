@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:/search?key=**
+sitemap: https://www.itqaneducation.com/sitemap
+sitemap: https://www.itqaneducation.com/ar/sitemap
+sitemap: https://www.itqaneducation.com/en/sitemap
+sitemap: https://www.itqaneducation.com/fa/sitemap

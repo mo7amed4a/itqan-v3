@@ -1,0 +1,547 @@
+{
+  "Header": {
+    "be_our_agent": "Be our agent",
+    "follow_up_on_the_registration_request": "Follow up on the registration request",
+    "search_for_the_university": "Search for the university",
+    "booking_btn": "Reserve a seat",
+    "home": "Home",
+    "blog": "Blog",
+    "about_us": "Who are we?",
+    "contact_us": "Contact us",
+    "turkish_universities": "Universities of Türkiye",
+    "cyprus_universities": "Cyprus universities",
+    "student_accommodation": "Student housing",
+    "partial_scholarships": "Partial grants",
+    "programs": "All programs",
+    "opportunities": "Opportunities",
+    "services": "Our services",
+    "search_university": "Search for the university",
+    "register_now": "Register now",
+    "steps_to_register": "Steps to register at universities",
+    "first_arab_site": "The first Arab website specialized in studies",
+    "in_turkey_for_arab_students": "In Türkiye for Arab students",
+    "about_itqan": "About mastering"
+  },
+  "layOutFixed": {
+    "drawer": {
+      "register_now": "Register now",
+      "personal_info": "Personal information",
+      "name": "the name",
+      "surname": "Title",
+      "country_of_residence": "Country of Residence",
+      "gender": "Sex",
+      "email": "e-mail",
+      "phone_number": "phone number",
+      "university_info": "Major and university information",
+      "select_degree": "Choose your university degree",
+      "select_language": "Choose language",
+      "select_specialization": "Choose your specialty",
+      "select_universities": "Choose the universities you would like to join",
+      "message_text": "Message text",
+      "message_content": "Message text",
+      "name_required": "Name required",
+      "surname_required": "Title required",
+      "country_required": "Country of residence is required",
+      "gender_required": "Sex is required",
+      "email_required": "Email required",
+      "invalid_email": "Email is invalid",
+      "phone_required": "Phone number required",
+      "select_degree_required": "University degree required",
+      "select_language_required": "Language is required",
+      "select_specialization_required": "Specialization is required",
+      "select_universities_required": "Universities are required",
+      "message_required": "Message content is required",
+      "submitting": "Registration is in progress",
+      "btnCopy": "Copy the code",
+      "followup_request": "Order tracking",
+      "close": "cancellation"
+    }
+  },
+  "Footer": {
+    "siteName": "For educational mastery",
+    "copyright": "All rights reserved",
+    "home": "Home",
+    "aboutUs": "Who are we?",
+    "contactUs": "Contact us",
+    "majors": "Specialties",
+    "services": "Our services",
+    "links": "Related links",
+    "address": "Istanbul - Fatih - Hotelzade Station",
+    "bio": "A leading academic consulting company in the field of student registration in Turkish universities, international schools and language institutes.",
+    "LinkApps": "Other links",
+    "TOS": "Terms of Service",
+    "agents": "Agents",
+    "privacyPolicy": "privacy policy"
+  },
+  "home": {
+    "years_1": "Year of establishment",
+    "years_2": "Ranking locally",
+    "rank_1": " Ranking globally",
+    "count_1": "Number of specializations",
+    "start_price": "Prices start",
+    "discount": "opponent",
+    "takh": "Specialties",
+    "from": "from",
+    "to": "to",
+    "topMajors": "The most important specialties",
+    "filter": "Filters",
+    "hero": {
+      "title": "The first Arab website specialized in studies",
+      "subtitle": "In Türkiye for Arab students",
+      "register_now": "Register now",
+      "steps": "Steps to register at universities",
+      "choose_study": "Choose to study in Türkiye",
+      "select_specialty": "Choose your specialty",
+      "select_years": "Choose the duration of study",
+      "select_none": "chosen",
+      "select_study_level": "Choose your level of study",
+      "select_language": "Choose the language of study",
+      "select_country": "Select country",
+      "select_cost": "Choose the cost of study",
+      "down": "minimum",
+      "up": "maximum",
+      "cost": "Cost",
+      "select_country_free": "Available countries",
+      "search": "Search",
+      "english": "English",
+      "turkish": "Turkish",
+      "arabic": "Arabic",
+      "master": "Master's",
+      "bachelor": "Bachelor's degree",
+      "medcant": "medicine",
+      "engeneer": "engineering"
+    },
+    "videoCall": {
+      "text": "Request a video call with your educational advisor",
+      "booking_now": "Book a call now"
+    },
+    "specialties": {
+      "title": "The most important specialties"
+    },
+    "best_universities": {
+      "title": "The best Turkish universities"
+    },
+    "best_universitiesTwo": {
+      "title": "The best Cypriot universities"
+    },
+    "whyItqan": {
+      "title": "Why Itqan?",
+      "p1": "This text is an example of text that can be replaced in the same space. This text was generated from the Arabic text generator, where you can generate such text or many other texts in addition to increasing the number of letters that the application generates.",
+      "p2": "This text is an example of text that can be replaced in the same space. This text was generated from the Arabic text generator, where you can generate such text or many other texts in addition to increasing the number of letters that the application generates.",
+      "p3": "This text is an example of text that can be replaced in the same space. This text was generated from the Arabic text generator, where you can generate such text or many other texts in addition to increasing the number of letters that the application generates.",
+      "p4": "This text is an example of text that can be replaced in the same space. This text was generated from the Arabic text generator, where you can generate such text or many other texts in addition to increasing the number of letters that the application generates."
+    },
+    "WhatService": {
+      "title": "What does itqan offer?",
+      "title2": "If you registered through it",
+      "read_more": "See more"
+    },
+    "form_booking": {
+      "title": "Application form through Itqan",
+      "name": "the name",
+      "email": "e-mail",
+      "mobile_w": "WhatsApp number",
+      "submit": "Register now",
+      "loading": "Registration is in progress",
+      "name_required": "Name required",
+      "email_required": "Email is required",
+      "mobile_w_required": "WhatsApp number is required",
+      "email_invalid": "Email is invalid",
+      "mobile_w_invalid": "The WhatsApp number is invalid"
+    },
+    "numbers": {
+      "title": "Educational mastery",
+      "title2": "Numbers and statistics",
+      "itqan_studens_count": "Number of Itqan students in Turkish universities",
+      "universities_count": "Number of private universities in Türkiye",
+      "experience_count": "Years of experience",
+      "international_student_count": "Number of international and foreign students in Türkiye",
+      "consultation_count": "Number of student consultations"
+    },
+    "moth": {
+      "title2": "Certified trustworthy",
+      "title": "One of the best Turkish universities"
+    },
+    "steps": {
+      "title": "University registration",
+      "title2": "steps",
+      "read_more": "Read more"
+    },
+    "blogs": {
+      "title": "Articles and information center",
+      "read_more": "Read more"
+    },
+    "stories": {
+      "title": "Itqan Educational students",
+      "title2": "Stories and testimonies",
+      "title3": "Opinions and comments of students and parents"
+    }
+  },
+  "turkish_universities": {
+    "title": "Universities of Türkiye",
+    "links": {
+      "all": "everyone",
+      "istanbulEuropean": "European universities in Istanbul",
+      "istanbulAsian": "Istanbul Asian universities",
+      "ankara": "Ankara universities",
+      "mersin": "Mersin universities",
+      "gaziantep": "Gaziantep universities"
+    },
+    "mostRanked": "Most rated",
+    "topMajors": "The most important specialties",
+    "universityInfo": {
+      "name": "Ibn Khaldoun University",
+      "description": "This enhances the student's chances of obtaining prestigious jobs or pursuing graduate studies in recognized educational institutions around the world.",
+      "establishmentYear": "Year of establishment",
+      "ranking": "Global ranking",
+      "rankingNumber": "5746",
+      "establishedYearValue": "2020",
+      "majors": {
+        "humanSciences": "humanities",
+        "medicine": "Human medicine",
+        "computerEngineering": "Computer engineering",
+        "pharmacy": "Pharmacy"
+      },
+      "startingPrices": "Prices start",
+      "priceRange": {
+        "from": "from",
+        "to": "to"
+      },
+      "registerNow": "Register now"
+    },
+    "show_more": "View more"
+  },
+  "cypriot_universities": {
+    "title": "Cyprus universities",
+    "years_1": "Year of establishment",
+    "years_2": "Ranking locally",
+    "rank_1": " Ranking globally",
+    "count_1": "Number of specializations",
+    "start_price": "Prices start",
+    "discount": "opponent",
+    "takh": "Specialties",
+    "from": "from",
+    "to": "to",
+    "links": {
+      "all": "everyone",
+      "privateUniversities": "Private universities",
+      "internationalUniversities": "International universities",
+      "cyprusUniversities": "Cyprus universities"
+    },
+    "mostRanked": "Most rated",
+    "topMajors": "The most important specialties",
+    "universityInfo": {
+      "name": "Ibn Khaldoun University",
+      "description": "This enhances the student's chances of obtaining prestigious jobs or pursuing graduate studies in recognized educational institutions around the world.",
+      "establishmentYear": "Year of establishment",
+      "ranking": "Global ranking",
+      "rankingNumber": "5746",
+      "establishedYearValue": "2020",
+      "majors": {
+        "humanSciences": "humanities",
+        "medicine": "Human medicine",
+        "computerEngineering": "Computer engineering",
+        "pharmacy": "Pharmacy"
+      },
+      "startingPrices": "Prices start",
+      "priceRange": {
+        "from": "from",
+        "to": "to"
+      },
+      "registerNow": "Register now"
+    },
+    "show_more": "View more"
+  },
+  "partial_scholarships": {
+    "title": "Partial grants",
+    "overview": "Overview",
+    "filter_text": "Filters",
+    "university": "Medpole University",
+    "years_1": "Year of establishment",
+    "years_2": "Ranking locally",
+    "rank_1": " Ranking globally",
+    "count_1": "Number of specializations",
+    "start_price": "Prices start",
+    "discount": "opponent",
+    "takh": "Specialties",
+    "from": "from",
+    "to": "to",
+    "notFound": "unavailable",
+    "specialization": {
+      "label": "Specialization",
+      "option1": " Computer engineering",
+      "option2": " Computer engineering",
+      "option3": " Computer engineering",
+      "option4": " Computer engineering"
+    },
+    "language": {
+      "label": "Language of study",
+      "value": "English"
+    },
+    "buttons": {
+      "view_university": "View the university",
+      "register_scholarship": "Register for the scholarship now"
+    },
+    "show_more": "Show more",
+    "level": {
+      "label": "Academic level"
+    },
+    "city": {
+      "label": "City"
+    },
+    "study_years": {
+      "label": "Number of years of study"
+    },
+    "fees": {
+      "label": "Fees",
+      "before": "Fees are before discount",
+      "after": "Fees after discount",
+      "annual": "Annual fees",
+      "total": "Total fees"
+    }
+  },
+  "university_details": {
+    "title": "Universities",
+    "years_1": "Year of establishment",
+    "years_2": "Ranking locally",
+    "rank_1": " Ranking globally",
+    "count_1": "Number of specializations",
+    "start_price": "Prices start",
+    "discount": "opponent",
+    "takh": "Specialties",
+    "tasnif": "Classification",
+    "from": "from",
+    "to": "to",
+    "card": {
+      "table": "table of contents",
+      "why": "What about",
+      "details": "details"
+    },
+    "links": {
+      "university_photos": "University pictures",
+      "study_features": "Advantages of studying at the university",
+      "recognitions": "Confessions made",
+      "university_numbers": "The university in numbers",
+      "university_specializations": "University specializations",
+      "university_accreditations": "University credits",
+      "university_languages": "University languages",
+      "university_Terms": "Application conditions",
+      "university_details": "More details",
+      "university_faqs": "Frequently asked questions"
+    },
+    "university": {
+      "info": "Information about",
+      "foundedIn": "Founded in",
+      "numbers": "In numbers",
+      "globalRank": "Global rankings",
+      "languages": "Languages",
+      "localRank": "Local ranking",
+      "staff": "University staff",
+      "studentsCount": "Number of students",
+      "nationalityCount": "Different nationality",
+      "video": "Introductory video about",
+      "photo": "Pictures about the university",
+      "features": "Advantages of studying in",
+      "studentHousings": "The university campus and its locations",
+      "languagesStudy": "Languages ​​of instruction in",
+      "languagesStudyAvailable": "Tteg",
+      "languagesStudyMoreLanguages": "The opportunity to study in many languages",
+      "faqs": "Question and answer about the university",
+      "confessions": "Recognitions obtained by the university"
+    },
+    "tabs": {
+      "studyPrograms": "Academic majors",
+      "studentHousing": "Student housing",
+      "majors": "Specialties",
+      "studyYears": "Years of study",
+      "studyLanguage": "Language of study",
+      "tuitionFee": "Installment",
+      "registration": "Registration",
+      "years": "years"
+    },
+    "studyPrograms": {
+      "programs": "Programs",
+      "studyYears": "Years of study",
+      "language": "Language of study",
+      "fees": "Fees",
+      "annualFees": "Annual fees",
+      "grantAvailable": "Grant available"
+    },
+    "housing": {
+      "capacity": "Capacity",
+      "price": "the price",
+      "beds": "Beds",
+      "meals": "Meals",
+      "internet": "Internet"
+    },
+    "specifications": {
+      "title": "University specifications"
+    },
+    "description": "More details about ",
+    "readMore": "Show more",
+    "readLess": "Offer less",
+    "howTo": "How to apply in ",
+    "Time": "Registration dates for ",
+    "booking_now": "Register now"
+  },
+  "housing": {
+    "titlePage": "Student housing",
+    "housing": "Housing",
+    "city": "City",
+    "capacity": "Capacity",
+    "beds": "Number of beds",
+    "meals": "Number of meals",
+    "internet": "Internet",
+    "price": "the price",
+    "type": "Type",
+    "no_image": "There is no photo",
+    "see_details": "View details",
+    "viewImage": "View photos",
+    "register": "registration",
+    "male": "Boys housing",
+    "female": "Female housing"
+  },
+  "breadcrumb": {
+    "Home": "Home",
+    "turkish-universities": "Universities of Türkiye",
+    "cyprus-universities": "Cyprus universities",
+    "universities": "University details",
+    "partial-scholarships": "Partial grants",
+    "blogs": "Blog",
+    "student-accommodation": "Student housing",
+    "services": "Our services"
+  },
+  "blogs": {
+    "title": "Blog - latest news",
+    "search": "Search",
+    "links": {
+      "study_in_turkey": "Study in Türkiye",
+      "living_in_turkey": "Living in Türkiye",
+      "university_specialties": "University majors",
+      "distance_study": "Distance learning",
+      "turkish_scholarships": "Turkish scholarships",
+      "self_development": "Self development",
+      "all": "everyone"
+    },
+    "most_visited": "Most visited",
+    "slide": {
+      "university_accreditations": "Here are all of Aiden University's accreditations - learn about them now",
+      "enhance_opportunities": "This enhances the student's chances of obtaining prestigious jobs or pursuing graduate studies in recognized educational institutions around the world"
+    },
+    "read_more": "Read more",
+    "show_more": "View more",
+    "show_less": "View less"
+  },
+  "followup_request": {
+    "tracking_title": "Follow up on the request",
+    "enter_code": "Enter the order code",
+    "code_require": "Code is required",
+    "submit_button": "send",
+    "title": "Follow up on a registration request",
+    "id": "Identification number",
+    "code": "Symbol",
+    "first_name": "first name",
+    "last_name": "Last name",
+    "country": "State",
+    "gender": "Sex",
+    "email": "e-mail",
+    "phone_number": "phone number",
+    "degree_level": "Academic level",
+    "language": "the language",
+    "specialization": "Specialization",
+    "preferred_universities": "Preferred universities",
+    "message_text": "Message text",
+    "created_at": "Creation date",
+    "updated_at": "Update date"
+  },
+  "services": {
+    "titlePage": "Our services",
+    "links": {
+      "all": "everyone"
+    },
+    "sectionText": " Get exclusive discounts, especially if you register through us",
+    "sectionText2": "Get admission to private universities for free and within only 24 hours",
+    "post_admission_services": "Post-admission services",
+    "sectionButton": "Register now",
+    "contactUs": {
+      "title": "Register with us now",
+      "subtitle": "Let us contact you. We are available on",
+      "hour": "around the clock",
+      "points": {
+        "a": "You can enlist the help of one of our team members to start your academic journey successfully.",
+        "b": "Whatever your inquiry, rest assured that we will provide you with free consultation.",
+        "c": "We guarantee admission to the best Turkish universities.",
+        "d": "We are committed to providing our services in the best way.",
+        "e": "We chart your academic future and support you until stability."
+      }
+    }
+  },
+  "translation": {
+    "h1": "Arab",
+    "title": "Hauptseite",
+    "to-client-page": "Visit the client site",
+    "to-second-page": "Please visit us",
+    "welcome": "Willkommen ZU Next.js 13/14 <1>With this application, please click on the link below</1> and i18next",
+    "blog": {
+      "text": "Please see below <1>Blogeintrag</1> Dieses Beispiels an.",
+      "link": "https://locize.com/blog/next-app-dir-i18n/"
+    }
+  },
+  "program": {
+    "title": "Programs and specializations",
+    "notFound": "unavailable",
+    "show_more": "View more",
+    "overview": "Overview",
+    "filterWord": "Filter to search for universities",
+    "w": "We found you",
+    "w2": "A university that suits you",
+    "search": "Search"
+  },
+  "pagination": {
+    "next": "the next",
+    "previous": "the previous"
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Do not hesitate to contact us for any inquiries or assistance. ",
+    "email": {
+      "label": "e-mail",
+      "value": "contact@yourcompany.com"
+    },
+    "address": {
+      "label": "the address",
+      "value": "123 Main Street, Cityville"
+    },
+    "form": {
+      "name": "the name",
+      "email": "e-mail",
+      "message": "message",
+      "submit": "Send the message",
+      "mobile": "phone number",
+      "title": "Topic title",
+      "address": "the address",
+      "validation": {
+        "name": "Name required",
+        "email": {
+          "required": "Email required",
+          "invalid": "Email is incorrect"
+        },
+        "address": "Address required",
+        "mobile": "Phone number required",
+        "title": "Topic title is required",
+        "message": "Message is required"
+      }
+    }
+  },
+  "blogDetails": {
+    "title": "News",
+    "Published": "Published in",
+    "author": "Edit by",
+    "date": "Update date",
+    "talk": "Talk to your educational advisor",
+    "btnTalk": "Book a call now"
+  },
+  "smallCard": {
+    "university": "university"
+  }
+}
