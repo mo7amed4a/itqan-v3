@@ -15,6 +15,7 @@ export default function HeroSection({
   data: {
     slider_title: string;
     slider_title2: string;
+    slider_title3: string;
     slider_bg_web: string;
     slider_image_web: string;
     slider_bg_mobile: string;
@@ -54,9 +55,9 @@ export default function HeroSection({
           className={`h-[70vh] md:h-[85vh] max-w-[90vw] xl:container mx-auto px-4 md:px-10 flex flex-col md:flex-row ltr:flex-row-reverse items-center`}
         >
           <div
-            className={`w-full lg:w-3/4 flex flex-col items-center text-center space-y-6`}
+            className={`w-full lg:w-3/4 flex flex-col items-center text-center space-y-8`}
           >
-            <h1 className="text-xl md:text-3xl lg:text-[2.5rem] font-bold text-gray-700 text-opacity-80 !leading-[1.35]">
+            <h1 className="text-xl md:text-3xl lg:text-[2.5rem] font-bold text-primary text-opacity-80 !leading-[1.35]">
               {/* {dataLang("hero.title")} */}
               {data?.slider_title}
               {/* {JSON.stringify(data)} */}
@@ -64,6 +65,10 @@ export default function HeroSection({
             <h2 className="text-lg md:text-xl lg:text-[2.5rem] text-secondary font-bold">
               {/* {dataLang("hero.subtitle")} */}
               {data?.slider_title2}
+            </h2>
+            <h2 className="text-lg md:text-xl lg:text-[2.5rem] text-gray-500 font-bold">
+              {/* {dataLang("hero.subtitle")} */}
+              {data?.slider_title3}
             </h2>
             {deviceType === "Mobile" && data.slider_image_mobile && (
               <Image
