@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const siteURL = "https://www.itqaneducation.com";
+export const siteURL = "https://itqaneducation.com";
 
 export const api = axios.create({
   baseURL: "https://admin.itqaneducation.com/api",
