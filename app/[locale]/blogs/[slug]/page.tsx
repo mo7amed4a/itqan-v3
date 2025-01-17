@@ -87,9 +87,11 @@ export default async function page({
           <section className='blog'>
             <div
               dangerouslySetInnerHTML={{ __html: blog.content }}
-              className='prose mx-auto mt-6 space-y-12 px-4 pb-10 text-lg tracking-wide text-gray-700 lg:prose-xl
+              className='prose mx-auto mt-6 space-y-12 px-4
+               pb-10 text-lg tracking-wide text-gray-700 lg:prose-xl
                prose-blockquote:border-secondary [&>p>p>a>strong]:!text-secondary
                [&>h2>strong>span]:!text-primary
+               [&>p#main-toc>strong]:!text-primary
                '
             ></div>
           </section>

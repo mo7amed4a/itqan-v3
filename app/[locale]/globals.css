@@ -168,12 +168,13 @@ ul.custom-bullet-university li {
   @apply text-secondary font-bold no-underline hover:underline
 }
 
-#main-toc[name="tableOfContents"] {
+.prose #main-toc[name="tableOfContents"] {
   @apply !text-primary
 }
 
 .prose a[href^="#"] {
-  @apply !border-primary border-s-4 h-auto text-sm bg-gray-100 p-1 rounded-e text-gray-600 ps-2 no-underline hover:text-secondary
+  /* @apply !border-primary border-s-4 h-auto text-sm bg-gray-100 p-1 rounded-e text-gray-600 ps-2 no-underline hover:text-secondary */
+  @apply h-auto text-sm bg-gray-100 p-1 rounded-e text-gray-600 ps-2 no-underline hover:text-secondary
 }
 
 

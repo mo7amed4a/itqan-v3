@@ -52,7 +52,7 @@ export default function HeroSection({
         className={`bg-hero px-6 overflow-y-hidden py-10 lg:py-0`}
       >
         <div
-          className={`h-[70vh] md:h-[85vh] max-w-[90vw] xl:container mx-auto px-4 md:px-10 flex flex-col md:flex-row ltr:flex-row-reverse items-center`}
+          className={`h-[70vh] md:h-[85vh] max-w-[90vw] xl:container mx-auto px-4 md:px-10 flex flex-col md:flex-row ltr:md:flex-row-reverse items-center`}
         >
           <div
             className={`w-full lg:w-3/4 flex flex-col items-center text-center space-y-8`}
