@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-
 import { i18n } from '@/i18n.config'
-
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
+
 
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {}
@@ -18,45 +17,68 @@ function getLocale(request: NextRequest): string | undefined {
   return locale
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  const searchParams = request.nextUrl.searchParams 
 
-  const userLang = request.headers.get('accept-language')?.split(',')[0] || 'ar';
-  request.headers.set('accept-language', "ar-EG,ar")  
-  const supportedLangs = ['en', 'ar', 'fa'];
+  request.headers.set('accept-language', "ar-EG,ar")
 
-  if (supportedLangs.includes(userLang)) {
-    return NextResponse.next();
+  if (pathname.startsWith('/ar')) {
+    const newPathname = pathname.replace(/^\/ar/, '') || '/'
+    const newUrl = new URL(newPathname, request.url)
+
+    searchParams.forEach((value, key) => {
+      newUrl.searchParams.set(key, value)
+    })
+    return NextResponse.redirect(newUrl)
   }
-
 
   const pathnameIsMissingLocale = i18n.locales.every(
     locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
 
-  // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request)
 
     if (locale === i18n.defaultLocale) {
-      return NextResponse.rewrite(
-        new URL(
-          `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-          request.url
-        )
-      )
-    }
-
-    return NextResponse.redirect(
-      new URL(
+      const newUrl = new URL(
         `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
         request.url
       )
+
+      searchParams.forEach((value, key) => {
+        newUrl.searchParams.set(key, value)
+      })
+
+      return NextResponse.rewrite(newUrl)
+    }
+
+    const newUrl = new URL(
+      `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
+      request.url
     )
+
+    searchParams.forEach((value, key) => {
+      newUrl.searchParams.set(key, value)
+    })
+
+    return NextResponse.redirect(newUrl)
   }
+  
+      // const isRouteValid = await checkIfRouteExists(pathname)
+      // if (!isRouteValid) {
+      //   return NextResponse.rewrite(new URL('/404', request.url))
+      // }
 }
 
+
+// async function checkIfRouteExists(pathname: string): Promise<boolean> {
+//   return !pathname.includes('invalid')
+// }
+
+
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/images|favicon.ico|robots.txt|images/*|icons/*|logo/*).*)']
+  matcher: [
+    '/((?!api|_next/static|_next/images|favicon.ico|robots.txt|images/*|icons/*|logo/*).*)'
+  ]
 }

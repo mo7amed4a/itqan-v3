@@ -25,7 +25,7 @@ export async function generateMetadata() {
     alternates: {
       canonical: `${siteURL}`,
       languages: {
-        'x-default': `${siteURL}/ar`,
+        'x-default': `${siteURL}`,
         'en': `${siteURL}/en`,
         'fa': `${siteURL}/fa`,
       },

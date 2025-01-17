@@ -1,14 +1,14 @@
 {
   "Header": {
     "be_our_agent": "Be our agent",
-    "follow_up_on_the_registration_request": "Follow up on the registration request",
+    "follow_up_on_the_registration_request": "Follow up request",
     "search_for_the_university": "Search for the university",
     "booking_btn": "Reserve a seat",
     "home": "Home",
     "blog": "Blog",
     "about_us": "Who are we?",
     "contact_us": "Contact us",
-    "turkish_universities": "Universities of Türkiye",
+    "turkish_universities": "Turkish Universities",
     "cyprus_universities": "Cyprus universities",
     "student_accommodation": "Student housing",
     "partial_scholarships": "Partial grants",
@@ -20,7 +20,7 @@
     "steps_to_register": "Steps to register at universities",
     "first_arab_site": "The first Arab website specialized in studies",
     "in_turkey_for_arab_students": "In Türkiye for Arab students",
-    "about_itqan": "About mastering"
+    "about_itqan": "About Itqan"
   },
   "layOutFixed": {
     "drawer": {

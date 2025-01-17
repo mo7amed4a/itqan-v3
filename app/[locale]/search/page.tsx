@@ -14,7 +14,7 @@ export async function generateMetadata() {
     alternates: {
       canonical: `${siteURL}/search`,
       languages: {
-        'x-default': `${siteURL}/ar/search`,
+        'x-default': `${siteURL}/search`,
         'en': `${siteURL}/en/search`,
         'fa': `${siteURL}/fa/search`,
       },
@@ -57,8 +57,8 @@ export default async function Page({
 
   const queryString = new URLSearchParams(query).toString();
 
-const response = await getData(`/programs?${queryString}`, lng);
-const data = response?.data;
+  const response = await getData(`/programs?${queryString}`, lng);
+  const data = response?.data;
 
   
   return (

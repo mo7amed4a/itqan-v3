@@ -3,13 +3,13 @@ import Link from "next/link"
 import { useParams } from "next/navigation"
 import React from "react"
 
-export default function LinkApp({children,href, className, breadcrumb=false}: {
+// @typescript-eslint/no-unused-vars
+export default function LinkApp({children,href, className}: {
     children: React.ReactNode
     href: string,
     className?: string,
-    breadcrumb?: boolean
+    // breadcrumb?: boolean
 }) {
-  console.log(breadcrumb);
   const {locale} = useParams()
   const lng = locale === "ar" ? null : locale
   return lng ? (

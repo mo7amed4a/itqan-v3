@@ -31,7 +31,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `${siteURL}/turkish-universities/${category}`,
       languages: {
-        'x-default': `${siteURL}/ar/turkish-universities/${category}`,
+        'x-default': `${siteURL}/turkish-universities/${category}`,
         'en': `${siteURL}/en/turkish-universities/${category}`,
         'fa': `${siteURL}/fa/turkish-universities/${category}`,
       },
@@ -66,6 +66,9 @@ export default async function UniversityPage({
 
   const response = await getData(url, locale);
   data = response?.data;
+
+  const siteData = (await getData('/get_settings', locale))?.data
+
 
   // const pagination = data?.paginated_universities?.pagination || null;
 
@@ -142,6 +145,35 @@ export default async function UniversityPage({
             {/* <div className="flex justify-center mt-10">
               <ShowMoreBtn page={page} text={t("show_more")} />
             </div> */}
+
+<script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': siteData?.title,
+            author: siteData?.site_name,
+            interactionStatistic: [
+              {
+                '@type': 'InteractionCounter',
+                interactionService: {
+                  '@type': 'WebSite',
+                  name: 'Twitter',
+                  url: 'http://www.twitter.com'
+                },
+                interactionType: 'https://schema.org/ShareAction',
+                userInteractionCount: '1203'
+              },
+              {
+                '@type': 'InteractionCounter',
+                interactionType: 'https://schema.org/CommentAction',
+                userInteractionCount: '78'
+              }
+            ],
+            name: data?.seo[0]?.page_title
+          })
+        }}
+      />
           </div>
         ) : (
           <div className="min-h-[40vh] w-full flex justify-center items-center">

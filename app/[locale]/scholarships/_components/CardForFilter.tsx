@@ -40,12 +40,12 @@ export default async function CardForFilter({ data, lng}: CardFullProps) {
               width={100}
               height={100}
             />
-            <h1 className="text-primary text-xl font-bold text-start w-full">
+            <h2 className="text-primary text-xl font-bold text-start w-full">
               {data.university_name}
-            </h1>
+            </h2>
           </div>
           <div>
-            <span className="text-gray-600 font-bold text-sm">{data.program_name}</span>
+            <h3 className="text-gray-600 font-bold text-sm">{data.program_name}</h3>
           </div>
         </LinkApp>
         <div className="w-full gap-2 md:items-center text-gray-800 text-xs md:text-sm grid grid-cols-3">

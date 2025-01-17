@@ -34,7 +34,7 @@ export default function Photos({ data }: { data: PhotosType }) {
                     width={500}
                     height={500}
                     alt="alt"
-                    className="rounded-full size-auto bg-white border-none bg-contain"
+                    className="rounded-full size-auto border-none bg-contain"
                   />
               </Card>
             </CarouselItem>

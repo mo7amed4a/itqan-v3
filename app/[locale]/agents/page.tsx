@@ -17,7 +17,7 @@ export async function generateMetadata({ params } : {params: Promise<{
     alternates: {
       canonical: `${siteURL}/agents`,
       languages: {
-        'x-default': `${siteURL}/ar/agents`,
+        'x-default': `${siteURL}/agents`,
         'en': `${siteURL}/en/agents`,
         'fa': `${siteURL}/fa/agents`,
       },

@@ -35,7 +35,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `${siteURL}/blogs`,
       languages: {
-        'x-default': `${siteURL}/ar/blogs`,
+        'x-default': `${siteURL}/blogs`,
         'en': `${siteURL}/en/blogs`,
         'fa': `${siteURL}/fa/blogs`,
       },
@@ -75,6 +75,11 @@ export default async function Blogs({
   blogs = resp?.data?.posts?.data || null;
   const links = resp?.data?.cats || null;
   const sliders = resp?.data?.sliders || null;
+
+
+  let siteData
+  const response = await getData('/get_settings', locale)
+  siteData = response?.data
 
   return (
     <div>
@@ -195,6 +200,35 @@ export default async function Blogs({
           <ShowMoreBtn page={page} text={blogsLang.show_more} />
         </div>
       </div>
+
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': siteData?.title,
+            author: siteData?.site_name,
+            interactionStatistic: [
+              {
+                '@type': 'InteractionCounter',
+                interactionService: {
+                  '@type': 'WebSite',
+                  name: 'Twitter',
+                  url: 'http://www.twitter.com'
+                },
+                interactionType: 'https://schema.org/ShareAction',
+                userInteractionCount: '1203'
+              },
+              {
+                '@type': 'InteractionCounter',
+                interactionType: 'https://schema.org/CommentAction',
+                userInteractionCount: '78'
+              }
+            ],
+            name: blogsLang.title
+          })
+        }}
+      />
     </div>
   );
 }

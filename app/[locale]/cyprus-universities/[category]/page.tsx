@@ -32,7 +32,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `${siteURL}/cyprus-universities/${category}`,
       languages: {
-        'x-default': `${siteURL}/ar/cyprus-universities/${category}`,
+        'x-default': `${siteURL}/cyprus-universities/${category}`,
         'en': `${siteURL}/en/cyprus-universities/${category}`,
         'fa': `${siteURL}/fa/cyprus-universities/${category}`,
       },
@@ -69,6 +69,8 @@ export default async function UniversityPage({
 
   const response = await getData(url, lng);
   data = response?.data;
+
+  const siteData = (await getData('/get_settings', lng))?.data
 
   // const pagination = data?.paginated_universities?.pagination || null;
 
@@ -167,6 +169,36 @@ export default async function UniversityPage({
             {/* <div className="flex justify-center mt-10">
               <ShowMoreBtn page={page} text={t("show_more")} />
             </div> */}
+
+
+<script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': siteData?.title,
+            author: siteData?.site_name,
+            interactionStatistic: [
+              {
+                '@type': 'InteractionCounter',
+                interactionService: {
+                  '@type': 'WebSite',
+                  name: 'Twitter',
+                  url: 'http://www.twitter.com'
+                },
+                interactionType: 'https://schema.org/ShareAction',
+                userInteractionCount: '1203'
+              },
+              {
+                '@type': 'InteractionCounter',
+                interactionType: 'https://schema.org/CommentAction',
+                userInteractionCount: '78'
+              }
+            ],
+            name: data?.seo[0]?.page_title
+          })
+        }}
+      />
           </div>
         ):
         <div className="min-h-[40vh] w-full flex justify-center items-center">

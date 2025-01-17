@@ -1,5 +1,4 @@
 // import { notFound } from 'next/navigation'
-import './globals.css'
 import { getData } from '@/lib/data'
 // import NextTopLoader from "nextjs-toploader";
 import { CustomFlowbiteTheme, Flowbite } from 'flowbite-react'
@@ -81,10 +80,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   let data;
-  const response = await getData("/get_settings", params?.locale || "ar");
+  const locale = (await params).locale
+  const response = await getData("/get_settings", locale);
   data = response?.data;
   return {
     title: data?.site_name,

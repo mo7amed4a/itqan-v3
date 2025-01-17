@@ -66,14 +66,14 @@ export default function FilterSelectTwo({
       }
     });
     
-    const { specialization, level, years, language, price_from, price_to } = filters;
-    const isSpecializationOnly = specialization.length > 0 && !level.length && !years.length && !language.length && !price_from && !price_to;
+    // const { specialization, level, years, language, price_from, price_to } = filters;
+    // const isSpecializationOnly = specialization.length > 0 && !level.length && !years.length && !language.length && !price_from && !price_to;
     
-    if (isSpecializationOnly) {
-      router.push(`/${lng}/programs?${queryParams.toString()}`);
-    } else {
+    // if (isSpecializationOnly) {
+    //   router.push(`/${lng}/programs?${queryParams.toString()}`);
+    // } else {
       router.push(`/${lng}/search?${queryParams.toString()}`);
-    }
+    // }
   };
 
   const renderCheckboxGroup = (field: string, items: any[]) => (

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: a
     alternates: {
       canonical: `${siteURL}/scholarships`,
       languages: {
-        'x-default': `${siteURL}/ar/scholarships`,
+        'x-default': `${siteURL}/scholarships`,
         'en': `${siteURL}/en/scholarships`,
         'fa': `${siteURL}/fa/scholarships`,
       },
