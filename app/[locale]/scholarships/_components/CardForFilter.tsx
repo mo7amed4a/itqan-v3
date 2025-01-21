@@ -3,6 +3,7 @@ import React from "react";
 import LinkApp from "@/components/global/LinkApp";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "@/lib/dictionary";
+import OpenBooking from "@/components/layouts/fixedCps/OpenBooking";
 export type UniversityTwoType = {
   id: number;
   image: string;
@@ -40,7 +41,7 @@ export default async function CardForFilter({ data, lng}: CardFullProps) {
               width={100}
               height={100}
             />
-            <h2 className="text-primary text-xl font-bold text-start w-full">
+            <h2 className="text-primary text-xl font-bold text-start w-full mt-4">
               {data.university_name}
             </h2>
           </div>
@@ -100,15 +101,14 @@ export default async function CardForFilter({ data, lng}: CardFullProps) {
           </div>
         </div>
         <div className="flex justify-center w-full">
-          <LinkApp href={`/universities-filters/overview/${data.university_slug}`}>
+          <OpenBooking data={data}>
             <Button
               color="primary"
-              // size={"xl"}
               className="group-hover:bg-secondary w-56 font-bold hover:!scale-100 group-hover:text-white"
             >
               {DataLang.universityInfo.registerNow}
             </Button>
-          </LinkApp>
+          </OpenBooking>
         </div>
       </div>
     </div>

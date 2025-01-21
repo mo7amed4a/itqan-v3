@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: Promise<{ locale: any }
   const lng = (await params).locale;
   const {partial_scholarships, breadcrumb} = await getTranslations(lng);
   const response = await getData("/grants", lng);
-  const data = response?.data;  
+  const data = response?.data;
   return (
     <div className="container lg:max-w-[85vw] mx-auto 6xl:!container px-4 md:px-0 my-10">
       <BreadcrumbApp lang={breadcrumb}/>
