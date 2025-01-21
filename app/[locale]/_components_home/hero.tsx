@@ -10,7 +10,8 @@ import FilterSelectHero from "./FilterHero";
 
 export default function HeroSection({
   data,
-  jsonPromise
+  jsonPromise,
+  locale
 }: {
   data: {
     slider_title: string;
@@ -21,7 +22,8 @@ export default function HeroSection({
     slider_bg_mobile: string;
     slider_image_mobile: string;
   },
-  jsonPromise: any
+  jsonPromise: any,
+  locale: string
 }) {
   const lng = jsonPromise
   const [deviceType, setDeviceType] = useState<string | null>(null);
@@ -115,7 +117,7 @@ export default function HeroSection({
         </div>
       </div>
       <div className="w-full">
-        <FilterSelectHero dataLang={jsonPromise}/>
+        <FilterSelectHero lng={locale} dataLang={jsonPromise}/>
       </div>
     </section>
   );

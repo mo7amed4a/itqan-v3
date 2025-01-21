@@ -20,14 +20,15 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function FilterSelectHero({
   col=false,
   filterData=null,
-  dataLang
+  dataLang,
+  lng
 }: {
   col?: boolean;
   // @typescript-eslint/no-explicit-any
   filterData?: any
   dataLang:any
+  lng: string
 }) {
-  const lng:any = "ar";
   // @typescript-eslint/no-explicit-any
   const [data, setData] = useState<any>(filterData || null)
 

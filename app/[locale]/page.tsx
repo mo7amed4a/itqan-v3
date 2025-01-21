@@ -52,7 +52,7 @@ export default async function Page({
 
   return (
     <main className="space-y-">
-      {settings && <HeroSection jsonPromise={Home} data={settings} />}
+      {settings && <HeroSection locale={lng} jsonPromise={Home} data={settings} />}
       <section className="bg-white py-8">
         <VideoTwo
           url={settings?.consult_url}
