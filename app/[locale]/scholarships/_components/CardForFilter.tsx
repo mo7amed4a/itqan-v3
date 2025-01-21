@@ -31,7 +31,7 @@ export default async function CardForFilter({ data, lng}: CardFullProps) {
    return (
     <div className="bg-white rounded-xl p-4 lg:!px-10 flex flex-col md:flex-row text-start hover:shadow group hover:cursor-pointer">
       <div className="w-full md:py-5 flex flex-col items-start space-y-4">
-        <LinkApp href={`/universities/${data.university_slug}`} >
+        <LinkApp href={`/university/${data.university_slug}`} >
           <div className="flex justify-between items-center w-full gap-5">
             <Image
               src={data.logo.split("http://").join("https://")}

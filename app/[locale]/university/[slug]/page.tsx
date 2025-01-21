@@ -1,4 +1,4 @@
-import UniversitiesPage from "@/components/universities/view/UniversitiesPage";
+import UniversitiesPage from "@/components/university/view/UniversitiesPage";
 import { siteURL } from "@/lib/axios";
 import { getData } from "@/lib/data";
 
@@ -7,6 +7,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string, slug: string }>;
 }) {
+  
   const locale = (await params).locale
   const slug = (await params).slug
   let data;
@@ -20,11 +21,11 @@ export async function generateMetadata({
   return {
     title: uniData?.university?.name  + " - " + data?.site_name,
     alternates: {
-      canonical: `${siteURL}/universities/${slug}`,
+      canonical: `${siteURL}/university/${slug}`,
       languages: {
-        'x-default': `${siteURL}/universities/${slug}`,
-        'en': `${siteURL}/en/universities/${slug}`,
-        'fa': `${siteURL}/fa/universities/${slug}`,
+        'x-default': `${siteURL}/university/${slug}`,
+        'en': `${siteURL}/en/university/${slug}`,
+        'fa': `${siteURL}/fa/university/${slug}`,
       },
     },
   };

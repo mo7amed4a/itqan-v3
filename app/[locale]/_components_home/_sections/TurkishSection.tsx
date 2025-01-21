@@ -37,10 +37,9 @@ export default function TurkishSection({
               className="md:basis-1/2 lg:basis-1/3 pb-8"
               key={item.id}
             >
-              <LinkApp href={`/universities//${item.slug}`}>
+              <LinkApp href={`/university/${item.slug}`}>
                 <CardUniversityHomeClient
                   dataLang={home}
-                  // major={home.topMajors}
                   btnText={home.form_booking.submit}
                   university={item}
                 />

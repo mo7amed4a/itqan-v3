@@ -59,6 +59,23 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
   const [isOpen, setIsOpen] = useState(searchParams.get("booking") ? true : false);
   const [text, setText] = useState<string | null>(null);
   const [dataHome, setDataHome] = useState<DataHomeType | null>(null);
+  // const [level, setLevel] = useState<string|null>(null)
+  // const [program_name, setProgram_name] = useState<string|null>(null)
+  // const [program_language, setProgram_language] = useState<string|null>(null)
+  // const [university_name, setUniversity_name] = useState<string|null>(null)
+  const [initialValues, setInitialValues] = useState({
+    name: "",
+    surname: "",
+    country: "",
+    gender: "",
+    email: "",
+    mobile: "",
+    select_degree: "",
+    language: "",
+    specialization: "",
+    universities: "",
+    message: "",
+  })
 
   const validationSchema = Yup.object({
     name: Yup.string().required(dataLang.drawer.name_require),
@@ -86,8 +103,6 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
 
   const handleSubmit = async (values: DataType) => {
     try {
-      // const response = await axios.post("/", values);
-      // console.log(response.data);
       const data = {
         first_name: values.name,
         last_name: values.surname,
@@ -165,6 +180,10 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
   const handleClose = () => {
     const current = new URLSearchParams(Array.from(searchParams.entries()))
     current.delete("register")
+    current.delete("level")
+    current.delete("program_language")
+    current.delete("program_name")
+    current.delete("university_name")
     const search = current.toString()
     const query = search ? `?${search}` : ""
     setIsOpen(false)
@@ -173,6 +192,7 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
   // useEffect(() => {
   //   // setText((localStorage.getItem("msgBooking") as string) || null);
   // }, []);
+  
 
   const getDataHome = async () => {
     const response = await getData("/filters", lng);
@@ -188,6 +208,19 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
     if (searchParams.get("register") === "open") {
       setIsOpen(true);
     }
+    setInitialValues({
+      name: "",
+      surname: "",
+      country: "",
+      gender: "",
+      email: "",
+      mobile: "",
+      select_degree: searchParams.get("level") || "",
+      language: searchParams.get("program_language") || "",
+      specialization: searchParams.get("program_name") || "",
+      universities: searchParams.get("university_name") || "",
+      message: "",
+    })
   }, [searchParams.get("register")])
 
   return (
@@ -211,19 +244,8 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
         <span className="py-3 ps-4 text-gray-500 text-base font-bold">{dataLang.drawer.register_now}</span>
         <Drawer.Items>
           <Formik
-            initialValues={{
-              name: "",
-              surname: "",
-              country: "",
-              gender: "",
-              email: "",
-              mobile: "",
-              select_degree: "",
-              language: "",
-              specialization: "",
-              universities: "",
-              message: "",
-            }}
+            initialValues={initialValues}
+            enableReinitialize={true}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
@@ -342,10 +364,13 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
                   <Card className="shadow-none [&>div]:p-3 md:[&>div]:p-4">
                     <span className="text-base md:text-lg text-primary">
                       {dataLang.drawer.university_info}
+                      {values.select_degree}
                     </span>
                     <Select
                       name="select_degree"
                       defaultValue={values.select_degree}
+                      value={initialValues.select_degree}
+                      disabled={initialValues.select_degree ? true : false}
                       onValueChange={(value) => {
                         setFieldValue("select_degree", value);
                       }}
@@ -387,6 +412,8 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
                     <Select
                       name="language"
                       defaultValue={values.language}
+                      value={initialValues.language}
+                      disabled={initialValues.language ? true : false}
                       onValueChange={(value) => {
                         setFieldValue("language", value);
                       }}
@@ -428,6 +455,8 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
                     <Select
                       name="specialization"
                       defaultValue={values.specialization}
+                      value={initialValues.specialization}
+                      disabled={initialValues.specialization ? true : false}
                       onValueChange={(value) => {
                         setFieldValue("specialization", value);
                       }}
@@ -470,6 +499,8 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
                      <Select
                       name="universities"
                       defaultValue={values.universities}
+                      value={initialValues.universities}
+                      disabled={initialValues.universities ? true : false}
                       onValueChange={(value) => {
                         setFieldValue("universities", value);
                       }}

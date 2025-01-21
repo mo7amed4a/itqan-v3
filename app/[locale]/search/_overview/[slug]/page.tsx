@@ -2,7 +2,7 @@
 // import React from "react";
 // import { Button } from "@/components/ui/button";
 // import LinkApp from "@/components/global/LinkApp";
-// import CardDetails from "@/components/universities/template/CardDetails";
+// import CardDetails from "@/components/university/template/CardDetails";
 // import Image from "next/image";
 // import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
@@ -18,7 +18,7 @@
 //   data = response?.data;
 
 //   let uniData: any = null;
-//   const uniResponse = await getData(`/universities/${slug}/details`, locale);
+//   const uniResponse = await getData(`/university/${slug}/details`, locale);
 //   uniData = uniResponse?.data;
 
 //   return {

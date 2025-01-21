@@ -1,16 +1,16 @@
 import { getData } from "@/lib/data";
-import CardUniOne from "@/components/universities/template/CardUniOne";
-import CardVideo from "@/components/universities/template/CardVedio";
-import CardConfessions from "@/components/universities/template/CardConfessions";
-import CardRank from "@/components/universities/template/CardRank";
-import CardTableData from "@/components/universities/template/CardTableData";
-import CardLanguage from "@/components/universities/template/CardLanguage";
-import CardConditionsAndRegistration from "@/components/universities/template/CardConditionsAndRegistration";
-import CardFaqs from "@/components/universities/template/CardFaqs";
-import CardDetails from "@/components/universities/template/CardDetails";
-import CardHouse from "@/components/universities/template/CardHouse";
-import Navbar from "@/components/universities/template/NavbarForUniversity";
-import CardAlbum from "@/components/universities/template/CardAlbum";
+import CardUniOne from "@/components/university/template/CardUniOne";
+import CardVideo from "@/components/university/template/CardVedio";
+import CardConfessions from "@/components/university/template/CardConfessions";
+import CardRank from "@/components/university/template/CardRank";
+import CardTableData from "@/components/university/template/CardTableData";
+import CardLanguage from "@/components/university/template/CardLanguage";
+import CardConditionsAndRegistration from "@/components/university/template/CardConditionsAndRegistration";
+import CardFaqs from "@/components/university/template/CardFaqs";
+import CardDetails from "@/components/university/template/CardDetails";
+import CardHouse from "@/components/university/template/CardHouse";
+import Navbar from "@/components/university/template/NavbarForUniversity";
+import CardAlbum from "@/components/university/template/CardAlbum";
 import BreadcrumbApp from "@/components/global/breadcrumb";
 import { getTranslations } from "@/lib/dictionary";
 
@@ -27,6 +27,8 @@ export default async function UniversitiesPage({
   let data: any = null;
   const response = await getData(`/universities/${slug}/details`, locale);
   data = response?.data;
+  console.log(data);
+  
 
   let settings;
   const responseSettings = await getData("/get_settings", locale);

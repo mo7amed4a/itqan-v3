@@ -3,6 +3,7 @@ import React from "react";
 import LinkApp from "@/components/global/LinkApp";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "@/lib/dictionary";
+import OpenBooking from "@/components/layouts/fixedCps/OpenBooking";
 
 type CardFullProps = {
   lng: any;
@@ -16,7 +17,7 @@ export default async function CardForProgram({ data, lng}: CardFullProps) {
   return (
     <div className="bg-white rounded-xl p-4 lg:!px-10 flex flex-col md:flex-row text-start hover:shadow group hover:cursor-pointer">
       <div className="w-full md:py-5 flex flex-col items-start space-y-4">
-        <LinkApp href={`/universities/${data.university_slug}`} >
+        <LinkApp href={`/university/${data.university_slug}`} >
           <div className="flex justify-between items-center w-full gap-5">
             <Image
               src={data.logo.split("http://").join("https://")}
@@ -85,7 +86,7 @@ export default async function CardForProgram({ data, lng}: CardFullProps) {
           </div>
         </div>
         <div className="flex justify-center w-full">
-          <LinkApp href={`/universities-filters/overview/${data.university_slug}`}>
+          <OpenBooking data={data}>
             <Button
               color="primary"
               // size={"xl"}
@@ -93,41 +94,8 @@ export default async function CardForProgram({ data, lng}: CardFullProps) {
             >
               {DataLang.universityInfo.registerNow}
             </Button>
-          </LinkApp>
+          </OpenBooking>
         </div>
-
-        {/* <div className="flex justify-between md:justify-normal w-full gap-x-2 md:items-center">
-          <h3 className="flex gap-x-2 text-primary text-base text-start">
-            <FaUniversity />
-            {t("specialization.label")}:
-          </h3>
-          <p className="text-base text-gray-500">{data.program_name}</p>
-        </div>
-
-        <div className="flex justify-between md:justify-normal w-full gap-x-2 md:items-center">
-          <h3 className="flex gap-x-2 text-primary text-base text-start">
-            <FaTag />
-            {t("level.label")}:
-          </h3>
-          <p className="text-base text-gray-500">{data.level}</p>
-        </div> */}
-
-        {/* <div className="flex gap-x-2 md:items-center">
-          <h3 className="flex gap-x-2 text-primary text-base font-bold text-start">
-            <FaMapSigns />
-            {t("city.label")}:
-          </h3>
-          <p className="text-base text-gray-500">{data.city_name}</p>
-        </div> */}
-
-        {/* <div className="flex gap-x-2 md:items-center">
-          <h3 className="flex gap-x-2 text-primary text-base font-bold text-start">
-            {t("study_years.label")}:
-          </h3>
-          <p className="text-base text-gray-500">{data.study_years}</p>
-        </div> */}
-
-       
       </div>
     </div>
   );

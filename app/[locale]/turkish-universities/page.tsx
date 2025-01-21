@@ -127,7 +127,7 @@ export default async function UniversityPage({
                       <LinkApp
                         className='w-64 md:w-auto'
                         key={item.id}
-                        href={`/universities/${item.slug}`}
+                        href={`/university/${item.slug}`}
                       >
                         <CardUniversityTwo
                           lng={locale}
