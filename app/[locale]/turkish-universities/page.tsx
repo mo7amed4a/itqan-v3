@@ -110,7 +110,7 @@ export default async function UniversityPage({
                     lng={locale}
                     key={item.id}
                     item={item}
-                    url='universities'
+                    url='university'
                   />
                 ))}
               </CustomCarousel>
@@ -150,7 +150,7 @@ export default async function UniversityPage({
                   partial_scholarshipsLang={partial_scholarshipsLang}
                   blogsLang={blogsLang}
                   uniLang={turkish_universities}
-                  url='universities'
+                  url='university'
                   posts={data.paginated_universities.data}
                 />
               )}

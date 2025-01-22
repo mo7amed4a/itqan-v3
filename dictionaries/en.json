@@ -543,5 +543,11 @@
   },
   "smallCard": {
     "university": "university"
+  },
+  "notFound": {
+    "sorry": "Unfortunately",
+    "title": "The requested page does not exist",
+    "description": "We could not find the page you requested. The link may be wrong or the page may have been deleted",
+    "btn": "Go to the main page"
   }
 }

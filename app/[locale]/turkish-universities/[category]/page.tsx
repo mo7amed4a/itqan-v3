@@ -143,7 +143,7 @@ export default async function UniversityPage({
                     }
                   )}
                 </div>
-                {data?.paginated_universities?.data && <UniList partial_scholarshipsLang={partial_scholarshipsLang} blogsLang={blogsLang} uniLang={turkish_universities} url="universities" posts={data.paginated_universities.data} />}
+                {data?.paginated_universities?.data && <UniList partial_scholarshipsLang={partial_scholarshipsLang} blogsLang={blogsLang} uniLang={turkish_universities} url="university" posts={data.paginated_universities.data} />}
             </section>
             {/* <div className="flex justify-center mt-10">
               <ShowMoreBtn page={page} text={t("show_more")} />

@@ -7,7 +7,6 @@ import { UniversityTwoType } from "../../scholarships/_components/CardForFilter"
 import ShowMoreBtn from "@/components/global/ShowMore";
 import { siteURL } from "@/lib/axios";
 import { headers } from "next/headers";
-import OverviewContent from "./_components/OverviewContent";
 
 export async function generateMetadata({
   params
