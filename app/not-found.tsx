@@ -29,7 +29,7 @@ export default async function notFound() {
           ' container mx-auto 6xl:!container lg:max-w-[85vw]'
         }
       >
-        <div className='h-16 bg-primary'>{pathname}</div>
+        <div className='h-16 bg-primary'></div>
         <section className='grid h-screen items-center justify-center p-16 md:grid-cols-2'>
           {/* <div className='container flex flex-col items-center justify-center '>
             <div className='flex max-w-md flex-col gap-6 text-center'>
