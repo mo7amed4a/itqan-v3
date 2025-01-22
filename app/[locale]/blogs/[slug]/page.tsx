@@ -7,6 +7,8 @@ import BreadcrumbApp from '@/components/global/breadcrumb'
 import ConsultationCard from './_components/ConsultationCard'
 import CardBlog, { BlogItemType } from '@/components/cards/CardBlog'
 import { getTranslations } from '@/lib/dictionary'
+import { headers } from 'next/headers'
+import { siteURL } from '@/lib/axios'
 
 export async function generateMetadata({
   params
@@ -20,10 +22,20 @@ export async function generateMetadata({
   const resp = await getData(`/post/${slug}`, locale)
   const post = resp?.data?.post || null
   data = response?.data
+
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   return {
     title: post?.title + ' - ' + data?.site_name,
     description: post?.meta_description || '',
-    keywords: post?.meta_tags || ''
+    keywords: post?.meta_tags || '',
+    alternates: {
+      canonical: siteURL + pathname,
+      languages: {
+        'x-default': `${siteURL}/blogs/${slug}`,
+      },
+    },
   }
 }
 
