@@ -216,15 +216,17 @@ export default async function Page({
                 ) : (
                   <div className="bg-gray-200 w-full h-64 md:!w-1/6 md:h-28 rounded-md group-hover:scale-105 duration-300 transition-all"></div>
                 )}
-                <div className="space-y-2 py-8 w-5/6">
-                  <h3 className="text-lg md:text-xl font-bold group-hover:text-primary">
-                    {item.name}
-                  </h3>
-                  <p
-                    dangerouslySetInnerHTML={{ __html: item.name.slice(0, 160) }}
-                    className="text-sm md:text-base line-clamp-2 text-gray-500"
-                  ></p>
-                </div>
+                <Link href={item?.url||""}>
+                  <div className="space-y-2 py-8 w-5/6">
+                    <h3 className="text-lg md:text-xl font-bold group-hover:text-primary">
+                      {item.name}
+                    </h3>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: item.name.slice(0, 160) }}
+                      className="text-sm md:text-base line-clamp-2 text-gray-500"
+                    ></p>
+                  </div>
+                </Link>
               </div>
             ))}
         </div>
