@@ -7,12 +7,14 @@ import { getTranslations } from "@/lib/dictionary";
 import CardForProgram from "../programs/[slug]/_components/CardForFilter";
 import { UniversityTwoType } from "../scholarships/_components/CardForFilter";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
 export async function generateMetadata() {
- 
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
   return {
     alternates: {
-      canonical: `${siteURL}/search`,
+      canonical: `${siteURL}${pathname}`,
       languages: {
         'x-default': `${siteURL}/search`,
         'en': `${siteURL}/en/search`,
@@ -59,7 +61,6 @@ export default async function Page({
 
   const response = await getData(`/programs?${queryString}`, lng);
   const data = response?.data;
-
   
   return (
     <section className="container md:max-w-[85%] 6xl:!container 6xl:!mx-auto mx-auto px-4 py-10 md:px-0">

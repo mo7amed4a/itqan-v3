@@ -4,6 +4,7 @@ import { IoIosCall } from "react-icons/io";
 import ContactForm from "./_components/ContactForm";
 import { getTranslations } from "@/lib/dictionary";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
 
 export async function generateMetadata({
@@ -11,6 +12,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: any }>;
 }) {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   const locale =  (await params).locale
   const {Header} = await getTranslations(locale);
   let data;
@@ -19,7 +23,7 @@ export async function generateMetadata({
   return {
     title: Header.contact_us + " - " + data?.site_name,
     alternates: {
-      canonical: `${siteURL}/contact`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/contact`,
         'en': `${siteURL}/en/contact`,

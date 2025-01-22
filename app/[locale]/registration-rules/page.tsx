@@ -1,5 +1,6 @@
 import { siteURL } from "@/lib/axios";
 import { getData } from "@/lib/data";
+import { headers } from "next/headers";
 import React from "react";
 
 export async function generateMetadata({
@@ -12,6 +13,9 @@ export async function generateMetadata({
   let site = await getData("/get_settings", locale);
   const response = await getData("page/registration-rules", locale);
   data = response?.data?.page;
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   return {
       title: `${data?.meta_title || "About"} - ${
         site?.data?.site_name || "Itqan"
@@ -19,7 +23,7 @@ export async function generateMetadata({
     description: data?.meta_description,
     keywords: data?.meta_keywords,
     alternates: {
-      canonical: `${siteURL}/registration-rules`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/registration-rules`,
         'en': `${siteURL}/en/registration-rules`,

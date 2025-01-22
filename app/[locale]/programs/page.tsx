@@ -8,11 +8,29 @@ import {
   CarouselItem
 } from '@/components/ui/carousel'
 import { siteURL } from '@/lib/axios'
+import { headers } from 'next/headers'
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params
+}:{
+  params: Promise<{locale: any}>
+}) {
+  const locale = (await params).locale
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
+  const siteData = (await getData('/get_settings', locale))?.data
+
+  let data
+  const response = await getData('new_programs', locale)
+  data = response?.data
+
   return {
+    title: data?.overview?.meta_title + " - " + siteData?.site_name,
+    description: data?.overview?.meta_description || "",
+    keywords: data?.overview?.meta_keywords || "",
     alternates: {
-      canonical: `${siteURL}/programs`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/programs`,
         en: `${siteURL}/en/programs`,
@@ -48,7 +66,7 @@ export default async function page({
       </header>
       <section className='py-12 text-start'>
         {data?.data?.map((item: any) => (
-          <section key={item?.id} className='space-y-4'>
+          <section key={item?.id} className='space-y-4 text-center'>
             <span className='font-bold text-primary'>{item?.name}</span>
             <Carousel>
               <CarouselContent className='grid px-4 md:flex md:h-auto md:px-0 md:pe-10 lg:pe-20'>

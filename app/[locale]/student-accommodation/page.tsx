@@ -6,6 +6,7 @@ import { getTranslations } from "@/lib/dictionary";
 import { siteURL } from "@/lib/axios";
 import ShowMoreBtn from "@/components/global/ShowMore";
 import ProgramTabs from "../programs/[slug]/_components/ProgramTabs";
+import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -17,11 +18,14 @@ export async function generateMetadata({
   let data;
   const response = await getData("/get_settings", locale);
   data = response?.data;
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   return {
     title: Header.student_accommodation + " - " + data?.site_name,
     description: data?.meta_description || "",
     alternates: {
-      canonical: `${siteURL}/student_accommodation`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/student_accommodation`,
         'en': `${siteURL}/en/student_accommodation`,

@@ -1,10 +1,13 @@
 import { siteURL } from "@/lib/axios";
 import { getData } from "@/lib/data";
+import { headers } from "next/headers";
 import React from "react";
 
 export async function generateMetadata({ params } : {params: Promise<{
   locale: string;
 }> }) {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
   let data;
   const locale = (await params).locale
   let site = await getData("/get_settings", locale);
@@ -15,7 +18,7 @@ export async function generateMetadata({ params } : {params: Promise<{
     description: data?.meta_description,
     keywords: data?.meta_keywords,
     alternates: {
-      canonical: `${siteURL}/agents`,
+      canonical: `${siteURL + pathname}`,
       languages: {
         'x-default': `${siteURL}/agents`,
         'en': `${siteURL}/en/agents`,

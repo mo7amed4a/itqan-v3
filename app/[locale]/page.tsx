@@ -19,11 +19,14 @@ import CyprusSection from "./_components_home/_sections/CyprusSection";
 import { getTranslations } from "@/lib/dictionary";
 import { Locale } from "@/i18n.config";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
 export async function generateMetadata() {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
   return {
     alternates: {
-      canonical: `${siteURL}`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}`,
         'en': `${siteURL}/en`,
@@ -170,10 +173,10 @@ export default async function Page({
           <SectionApp
             title={Home.stories.title}
             title2={Home.stories.title2}
-            className="container lg:max-w-[85vw] 6xl:!container  mx-auto px-4 md:px-0"
+            className="container lg:max-w-[85vw] 6xl:!container  mx-auto px-4 md:px-0 text-center"
           >
             <>
-              <span className="text-lg md:text-4xl font-bold text-muted-foreground/90">
+              <span className="text-lg text-center md:text-4xl font-bold text-muted-foreground/90">
                 {Home.stories.title3}
               </span>
               <Stories data={data?.testemonials} />

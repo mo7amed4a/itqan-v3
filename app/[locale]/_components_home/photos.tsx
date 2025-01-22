@@ -8,6 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
+import LinkApp from "@/components/global/LinkApp";
 
 
 type PhotosType = {
@@ -29,13 +30,15 @@ export default function Photos({ data }: { data: PhotosType }) {
               <Card
                 className="rounded-full size-full border-none flex shadow-none justify-center p-4 bg-transparent items-center lg:w-56 text-center py-7"
               >
-                  <Image
-                    src={item.logo.split("http://").join("https://")}
-                    width={500}
-                    height={500}
-                    alt="alt"
-                    className="rounded-full size-auto border-none bg-contain"
-                  />
+                <LinkApp href={'/university/'+item.slug}>
+                    <Image
+                      src={item.logo.split("http://").join("https://")}
+                      width={500}
+                      height={500}
+                      alt="alt"
+                      className="rounded-full size-auto border-none bg-contain"
+                    />
+                </LinkApp>
               </Card>
             </CarouselItem>
           ))}

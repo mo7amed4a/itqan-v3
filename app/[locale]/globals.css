@@ -205,3 +205,9 @@ ul.custom-bullet-university li {
 .prose blockquote {
   @apply !not-italic
 }
+
+
+.gradient_color {
+  background: rgb(32,131,127);
+background: linear-gradient(0deg, rgba(32,131,127,1) 0%, rgba(32,131,127,1) 20%, rgba(255,255,255,1) 100%);
+}

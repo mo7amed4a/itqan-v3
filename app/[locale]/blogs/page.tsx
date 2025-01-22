@@ -18,6 +18,7 @@ import InputSearchBlog from "./_components/inputSearchBlog";
 import BlogList from "./_components/BlogList";
 import { getTranslations } from "@/lib/dictionary";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -29,11 +30,13 @@ export async function generateMetadata({
   let data;
   const response = await getData("/get_settings", locale);
   data = response?.data;
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
   return {
     title: Header.blog + " - " + data?.site_name,
     description: data?.meta_description || "",
     alternates: {
-      canonical: `${siteURL}/blogs`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/blogs`,
         'en': `${siteURL}/en/blogs`,
@@ -59,7 +62,7 @@ export default async function Blogs({
   const category = (await searchParams).category
   const page = (await searchParams).page
   const {blogs: blogsLang} = await getTranslations(locale);
-
+  
   let url = "/blog";
   if (category) {
     url = `/blog_cat/${category}`;
@@ -72,7 +75,8 @@ export default async function Blogs({
 
   let blogs = null;
   const resp = await getData(url, locale);
-  blogs = resp?.data?.posts?.data || null;
+
+  blogs = category ? resp?.data?.posts || null : resp?.data?.posts?.data || null;
   const links = resp?.data?.cats || null;
   const sliders = resp?.data?.sliders || null;
 

@@ -4,7 +4,6 @@ import { i18n } from '@/i18n.config'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
-
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
@@ -19,7 +18,10 @@ function getLocale(request: NextRequest): string | undefined {
 
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  const searchParams = request.nextUrl.searchParams 
+  const searchParams = request.nextUrl.searchParams
+
+  const headers = new Headers(request.headers);
+  headers.set("x-current-path", request.nextUrl.pathname);
 
   request.headers.set('accept-language', "ar-EG,ar")
 
@@ -30,7 +32,7 @@ export async function middleware(request: NextRequest) {
     searchParams.forEach((value, key) => {
       newUrl.searchParams.set(key, value)
     })
-    return NextResponse.redirect(newUrl)
+    return NextResponse.redirect(newUrl, { headers })
   }
 
   const pathnameIsMissingLocale = i18n.locales.every(
@@ -50,7 +52,7 @@ export async function middleware(request: NextRequest) {
         newUrl.searchParams.set(key, value)
       })
 
-      return NextResponse.rewrite(newUrl)
+      return NextResponse.rewrite(newUrl, { headers })
     }
 
     const newUrl = new URL(
@@ -62,20 +64,11 @@ export async function middleware(request: NextRequest) {
       newUrl.searchParams.set(key, value)
     })
 
-    return NextResponse.redirect(newUrl)
+    return NextResponse.redirect(newUrl, { headers })
   }
-  
-      // const isRouteValid = await checkIfRouteExists(pathname)
-      // if (!isRouteValid) {
-      //   return NextResponse.rewrite(new URL('/404', request.url))
-      // }
+
+  return NextResponse.next({ headers });
 }
-
-
-// async function checkIfRouteExists(pathname: string): Promise<boolean> {
-//   return !pathname.includes('invalid')
-// }
-
 
 export const config = {
   matcher: [

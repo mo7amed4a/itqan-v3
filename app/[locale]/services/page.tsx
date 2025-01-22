@@ -13,11 +13,17 @@ import BreadcrumbApp from "@/components/global/breadcrumb";
 import FormBooking from "../_components_home/form-booking";
 import { getTranslations } from "@/lib/dictionary";
 import { siteURL } from "@/lib/axios";
+import OpenBooking from "@/components/layouts/fixedCps/OpenBooking";
+import Link from "next/link";
+import { headers } from "next/headers";
 
 export async function generateMetadata() {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   return {
     alternates: {
-      canonical: `${siteURL}/services`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/services`,
         'en': `${siteURL}/en/services`,
@@ -122,15 +128,17 @@ export default async function Page({
                     )
                     .services.map((item: any) => (
                       <CarouselItem
-                        className="basis-1/2 md:basis-1/5 pb-8"
+                        className="basis-1/2 md:basis-1/4 pb-8"
                         key={item.id}
                       >
+                      <Link href={item?.url||""}>
                         <CardSmall
-                        lng={smallCard}
+                          lng={smallCard}
                           services
                           imageUrl={item.image}
                           text={item.name}
-                        />
+                          />
+                      </Link>
                       </CarouselItem>
                     ))}
                 </CarouselContent>
@@ -146,15 +154,17 @@ export default async function Page({
                 <CarouselContent className="h-auto">
                   {data?.services[0]?.services?.map((item: any) => (
                     <CarouselItem
-                      className="basis-1/2 md:basis-1/5 pb-8"
+                      className="basis-1/2 md:basis-1/4 pb-8"
                       key={item.id}
                     >
+                      <Link href={item?.url||""}>
                       <CardSmall
-                      lng={smallCard}
+                        lng={smallCard}
                         services
                         imageUrl={item.image}
                         text={item.name}
-                      />
+                        />
+                      </Link>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -169,12 +179,14 @@ export default async function Page({
             {services.sectionText}
           </h2>
           <div className="w-full">
-            <Button
-              size="xl"
-              className="bg-primary text-white hover:bg-secondary lg:w-96 hover:scale-x-100"
-            >
-              {services.sectionButton}
-            </Button>
+            <OpenBooking >
+              <Button
+                size="xl"
+                className="bg-primary text-white hover:bg-secondary lg:w-96 hover:scale-x-100"
+              >
+                {services.sectionButton}
+              </Button>
+            </OpenBooking>
           </div>
         </div>
       </section>
@@ -223,12 +235,14 @@ export default async function Page({
           <span className="text-lg md:text-3xl font-bold text-white">
             {services.sectionText2}
           </span>
-          <Button
-            size="xl"
-            className="bg-secondary text-white md:w-96 hover:!scale-x-100"
-          >
-            {services.sectionButton}
-          </Button>
+          <OpenBooking>
+            <Button
+              size="xl"
+              className="bg-secondary text-white md:w-96 hover:!scale-x-100"
+            >
+              {services.sectionButton}
+            </Button>
+          </OpenBooking>
         </div>
         <Image 
           alt="alt"

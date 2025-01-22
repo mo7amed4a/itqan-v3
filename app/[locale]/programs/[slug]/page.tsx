@@ -6,11 +6,32 @@ import { getTranslations } from "@/lib/dictionary";
 import { UniversityTwoType } from "../../scholarships/_components/CardForFilter";
 import ShowMoreBtn from "@/components/global/ShowMore";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params
+}:{
+  params: Promise<{locale: any, slug:string }>
+}) {
+  const locale = (await params).locale
+  const slug = (await params).slug;
+
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
+  const siteData = (await getData('/get_settings', locale))?.data
+
+  let data
+  const response = await getData(`/program/${slug}`, locale);
+  data = response?.data
+
   return {
+
+    title: data?.overview?.name + " - " + siteData?.site_name,
+    description: data?.overview?.meta_description || "",
+    // keywords: data?.overview?.meta_keywords || "",
     alternates: {
-      canonical: `${siteURL}/programs`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/programs`,
         'en': `${siteURL}/en/programs`,

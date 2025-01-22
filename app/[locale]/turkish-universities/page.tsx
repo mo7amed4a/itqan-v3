@@ -10,12 +10,16 @@ import UniList from './_components/UniList'
 import LinksCategoryForUni from '@/components/global/LinksCategoryForUni'
 import { getTranslations } from '@/lib/dictionary'
 import { siteURL } from '@/lib/axios'
+import { headers } from 'next/headers'
 
 export async function generateMetadata({
   params
 }: {
   params: Promise<{ locale: any }>
 }) {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   const locale = (await params).locale
   let data
   const response = await getData('/get_settings', locale)
@@ -29,7 +33,7 @@ export async function generateMetadata({
     title: dataTwo?.seo[0]?.page_title + ' - ' + data?.site_name,
     description: dataTwo?.seo[0]?.meta_description,
     alternates: {
-      canonical: `${siteURL}/turkish-universities`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/turkish-universities`,
         en: `${siteURL}/en/turkish-universities`,

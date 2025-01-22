@@ -10,6 +10,7 @@ import LinksCategoryForUni from "@/components/global/LinksCategoryForUni";
 import { getTranslations } from "@/lib/dictionary";
 import UniList from "../turkish-universities/_components/UniList";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -20,7 +21,9 @@ export async function generateMetadata({
   let data;
   const response = await getData("/get_settings", locale);
   data = response?.data;
-
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   let dataTwo = null;
   let url = "/qyprus_universities";
   const responseTwo = await getData(url, locale);
@@ -29,7 +32,7 @@ export async function generateMetadata({
     title: dataTwo?.seo[0]?.page_title + "  - " + data?.site_name,
     description: dataTwo?.seo[0]?.meta_description,
     alternates: {
-      canonical: `${siteURL}/cyprus-universities`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/cyprus-universities`,
         'en': `${siteURL}/en/cyprus-universities`,

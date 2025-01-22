@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { getTranslations } from "@/lib/dictionary";
 import Image from "next/image";
+import Timeline from "./timeline";
 
 export default async function RegistrationCompleteStep({
   settings,
@@ -34,7 +35,8 @@ export default async function RegistrationCompleteStep({
 }) {
   return (
     <div className="container lg:max-w-[85vw] 6xl:!container  mx-auto ">
-      <Carousel>
+      <Timeline lng={lng} settings={settings}/>
+      <Carousel className="hidden md:block">
         <CarouselContent className="h-auto px-4 md:px-0">
           <CarouselItem className="basis-1/3 md:basis-1/5 pb-8">
             <Steps lng={lng}
@@ -97,12 +99,12 @@ const Steps = async ({
 }) => {
   const {home} = await getTranslations(lng);
   return (
-    <Card className="w-full md:max-w-sm mx-auto bg-gradient-to-b from-white via-white to-primary border-none">
+    <Card className="w-full md:max-w-sm mx-auto gradient_color border-none group">
       <CardContent className="p-6 flex flex-col items-center text-center gap-4 md:gap-6 md:space-y-5">
         <div className="relative">
           <Image
             src={image}
-            className="size-8 md:size-40"
+            className="size-8 md:size-40 group-hover:translate-y-2 duration-300"
             alt=""
             width={100}
             height={100}
@@ -114,7 +116,7 @@ const Steps = async ({
         <LinkApp href={link}>
           <Button
             variant="default"
-            className="bg-primary text-white md:w-40 h-6 md:h-12"
+            className="bg-primary group-hover:bg-secondary text-white md:w-40 h-6 md:h-12"
           >
             {home.steps.read_more}
           </Button>

@@ -54,21 +54,26 @@ export default function LocaleSwitcher() {
       className="flex gap-x-3"
     >
       <SelectTrigger
-        className="h-8 w-[55px] bg-transparent !text-white focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-0 md:h-9 md:w-[70px]"
+        className="h-8 w-auto bg-transparent !text-white focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-0 md:h-9"
         aria-label={'Select a locale'}
       >
-        <div className="!text-white">
+        <div className="!text-white text-xs text-nowrap">
           <SelectValue placeholder="Select language" />
         </div>
       </SelectTrigger>
       <SelectContent>
         {i18n.locales.map((locale) => (
           <SelectItem value={locale}
-            key={locale}
+            key={locale}  
+            // className='w-full flex gap-2 items-center'
             // className="relative flex w-full cursor-pointer select-none items-center rounded-sm py-1.5 px-3 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-start"
             onClick={() => handleLocaleChange(locale)}
           >
-            {locale}
+            <span>
+              {locale === "ar" && "العربية 🇸🇦"}
+              {locale === "en" && "English 🇬🇧"}
+              {locale === "fa" && " فارسی 🇵🇰"}
+            </span>
           </SelectItem>
         ))}
       </SelectContent>

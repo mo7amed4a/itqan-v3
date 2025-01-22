@@ -1,6 +1,7 @@
 import UniversitiesPage from "@/components/university/view/UniversitiesPage";
 import { siteURL } from "@/lib/axios";
 import { getData } from "@/lib/data";
+import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -17,11 +18,13 @@ export async function generateMetadata({
   let uniData: any = null;
   const uniResponse = await getData(`/universities/${slug}/details`, locale);
   uniData = uniResponse?.data;
-
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   return {
     title: uniData?.university?.name  + " - " + data?.site_name,
     alternates: {
-      canonical: `${siteURL}/university/${slug}`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/university/${slug}`,
         'en': `${siteURL}/en/university/${slug}`,

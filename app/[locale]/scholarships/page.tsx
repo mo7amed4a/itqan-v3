@@ -5,6 +5,7 @@ import CardForFilter, { UniversityTwoType } from "./_components/CardForFilter";
 import { getTranslations } from "@/lib/dictionary";
 import ProgramTabs from "../programs/[slug]/_components/ProgramTabs";
 import { siteURL } from "@/lib/axios";
+import { headers } from "next/headers";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: any }> }) {
   const locale = (await params).locale;
@@ -12,11 +13,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: a
   let data;
   const response = await getData("/get_settings", locale || "ar");
   data = response?.data;
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  
   return {
     title: Header.partial_scholarships + " - " + data?.site_name,
     description: data?.meta_description || "",
     alternates: {
-      canonical: `${siteURL}/scholarships`,
+      canonical: siteURL + pathname,
       languages: {
         'x-default': `${siteURL}/scholarships`,
         'en': `${siteURL}/en/scholarships`,

@@ -1,6 +1,6 @@
 "use client";
 import CardBlog, { BlogItemType } from "@/components/cards/CardBlog";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 const BlogList = ({ posts, blogLang }: { posts: any, blogLang: any}) => {
@@ -16,11 +16,11 @@ const BlogList = ({ posts, blogLang }: { posts: any, blogLang: any}) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + postsPerPage < posts.length ? prevIndex + postsPerPage : 0
-    );
-  };
+  // const handleNext = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex + postsPerPage < posts.length ? prevIndex + postsPerPage : 0
+  //   );
+  // };
 
   return (
     <div className="space-y-4">
@@ -36,14 +36,14 @@ const BlogList = ({ posts, blogLang }: { posts: any, blogLang: any}) => {
         ))}
       </section>
 
-      {currentIndex + postsPerPage < posts.length && (
+      {/* {currentIndex + postsPerPage < posts.length && (
         <Button
           onClick={handleNext}
           className="px-4 py-2 bg-primary text-white rounded"
         >
           {blogLang.show_more}
         </Button>
-      )}
+      )} */}
     </div>
   );
 };
