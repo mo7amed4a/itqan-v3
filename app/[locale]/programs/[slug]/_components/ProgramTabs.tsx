@@ -48,7 +48,9 @@ export default async function ProgramTabs({ children , locale, overview, housing
           {overview && <OverviewContent overview={overview} lng={lng} />}
         </TabsContent>
       </Tabs>
-      {overview && <OverviewContent overview={overview} lng={lng} />}
+      <div className="hidden">
+        {overview && <OverviewContent  overview={overview} lng={lng} />}
+      </div>
     </>
   );
 }
