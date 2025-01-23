@@ -10,6 +10,7 @@ import HeaderApp from '@/components/layouts/Header/header'
 import { Tajawal } from 'next/font/google'
 import { i18n, Locale } from '@/i18n.config'
 import { getTranslations } from '@/lib/dictionary'
+import BottomIcon from '@/components/global/BottomIcon'
 // import { Cairo } from 'next/font/google'
 
 const tajawal = Tajawal({
@@ -174,6 +175,7 @@ export default async function RootLayout({
           {children}
           <FooterApp lng={locale} />
         </Flowbite>
+        <BottomIcon lng={locale}/>
 
         <noscript>
           <iframe
