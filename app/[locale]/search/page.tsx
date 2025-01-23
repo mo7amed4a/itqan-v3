@@ -58,8 +58,8 @@ export default async function Page({
   if (page) query.page = page;
 
   const queryString = new URLSearchParams(query).toString();
-
-  const response = await getData(`/programs?${queryString}`, lng);
+  const url = decodeURIComponent(`/programs?${queryString}`)  
+  const response = await getData(url, lng);
   const data = response?.data;
   
   return (

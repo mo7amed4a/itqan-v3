@@ -7,6 +7,7 @@ import { UniversityTwoType } from "../../scholarships/_components/CardForFilter"
 import ShowMoreBtn from "@/components/global/ShowMore";
 import { siteURL } from "@/lib/axios";
 import { headers } from "next/headers";
+import { convert } from "html-to-text";
 
 export async function generateMetadata({
   params
@@ -26,7 +27,6 @@ export async function generateMetadata({
   data = response?.data
 
   return {
-
     title: data?.overview?.name + " - " + siteData?.site_name,
     description: data?.overview?.meta_description || "",
     // keywords: data?.overview?.meta_keywords || "",
@@ -92,6 +92,22 @@ export default async function Page({
           </div>
         )}
       </ProgramTabs>
+
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': "Program",
+            "headline": data?.overview?.name,
+            description: data?.overview?.meta_description,
+            name: data?.overview?.name,
+            overview: convert(data?.overview?.details, {
+              wordwrap: 130
+            })
+          })
+        }}
+      />
     </section>
   );
 }

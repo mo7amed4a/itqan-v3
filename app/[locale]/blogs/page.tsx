@@ -210,7 +210,7 @@ export default async function Blogs({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': siteData?.title,
+            '@type': "Articles",
             author: siteData?.site_name,
             interactionStatistic: [
               {

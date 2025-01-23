@@ -9,6 +9,8 @@ import CardBlog, { BlogItemType } from '@/components/cards/CardBlog'
 import { getTranslations } from '@/lib/dictionary'
 import { headers } from 'next/headers'
 import { siteURL } from '@/lib/axios'
+import { convert  } from 'html-to-text';
+
 
 export async function generateMetadata({
   params
@@ -64,7 +66,7 @@ export default async function page({
   data = response?.data
   return (
     <article className='container relative isolate mx-auto -mt-5 mb-5 px-4 text-start text-base 6xl:!container md:max-w-[85%] md:px-0'>
-      <BreadcrumbApp lang={breadcrumb} last={' '} />
+      <BreadcrumbApp lang={breadcrumb} last={' '}  />
       <div className='flex flex-col gap-4 md:flex-row'>
         <section className='mt-3 flex flex-col flex-wrap items-start text-start'>
           <h1 className='text-lg font-bold text-primary md:text-xl xl:text-2xl'>
@@ -127,26 +129,20 @@ export default async function page({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': data?.site_name,
-            author: data?.site_name,
-            interactionStatistic: [
-              {
-                '@type': 'InteractionCounter',
-                interactionService: {
-                  '@type': 'WebSite',
-                  name: 'Twitter',
-                  url: 'http://www.twitter.com'
-                },
-                interactionType: 'https://schema.org/ShareAction',
-                userInteractionCount: '1203'
-              },
-              {
-                '@type': 'InteractionCounter',
-                interactionType: 'https://schema.org/CommentAction',
-                userInteractionCount: '78'
-              }
-            ],
-            name: blog.title
+            '@type': "Article",
+            "headline": blog.title,
+            description: blog.meta_description,
+            "author": {
+              "@type": "Person",
+              "name": blog?.created_by
+            },
+            name: blog.title,
+            datePublished: blog?.created_at,
+            dateModified: blog?.created_at,
+            image: blog.image.split('http://').join('https://'),
+            articleBody: convert(blog.content, {
+              wordwrap: 130
+            })
           })
         }}
       />

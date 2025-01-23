@@ -92,7 +92,7 @@ export default async function page({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': siteData?.title,
+            '@type': 'Programs',
             author: siteData?.site_name,
             interactionStatistic: [
               {
@@ -111,8 +111,9 @@ export default async function page({
                 userInteractionCount: '78'
               }
             ],
+            description: data?.overview?.meta_description,
             name: data?.overview?.name
-          })
+          })  
         }}
       />
     </div>

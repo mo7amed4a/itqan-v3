@@ -58,24 +58,19 @@ export default function FilterSelectTwo({
 
   const handleSearch = () => {
     const queryParams = new URLSearchParams();
+  
     Object.entries(filters).forEach(([key, value]) => {
-      if (Array.isArray(value)) {
-        value.forEach((item) => queryParams.append(key, item));
+      if (Array.isArray(value) && value.length > 0) {
+        // تحويل المصفوفة إلى سلسلة مفصولة بفواصل
+        queryParams.append(key, value.join(','));
       } else if (value) {
+        // @ts-ignore
         queryParams.append(key, value);
       }
     });
-    
-    // const { specialization, level, years, language, price_from, price_to } = filters;
-    // const isSpecializationOnly = specialization.length > 0 && !level.length && !years.length && !language.length && !price_from && !price_to;
-    
-    // if (isSpecializationOnly) {
-    //   router.push(`/${lng}/programs?${queryParams.toString()}`);
-    // } else {
-      router.push(`/${lng}/search?${queryParams.toString()}`);
-    // }
+    const url = decodeURIComponent(queryParams.toString())
+    router.push(`/${lng}/search?${url}`);
   };
-
   const renderCheckboxGroup = (field: string, items: any[]) => (
     <div className="space-y-2">
       {/* <div className="flex items-center gap-2 text-primary">

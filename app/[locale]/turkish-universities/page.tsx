@@ -164,7 +164,7 @@ export default async function UniversityPage({
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
                   '@context': 'https://schema.org',
-                  '@type': siteData?.title,
+                  '@type': "Univ",
                   author: siteData?.site_name,
                   interactionStatistic: [
                     {

@@ -13,6 +13,7 @@ import Navbar from "@/components/university/template/NavbarForUniversity";
 import CardAlbum from "@/components/university/template/CardAlbum";
 import BreadcrumbApp from "@/components/global/breadcrumb";
 import { getTranslations } from "@/lib/dictionary";
+import { convert } from "html-to-text";
 
 export default async function UniversitiesPage({
   params,
@@ -26,9 +27,7 @@ export default async function UniversitiesPage({
   const {breadcrumb} = await getTranslations(locale);
   let data: any = null;
   const response = await getData(`/universities/${slug}/details`, locale);
-  data = response?.data;
-  console.log(data);
-  
+  data = response?.data;  
 
   let settings;
   const responseSettings = await getData("/get_settings", locale);
@@ -119,30 +118,36 @@ export default async function UniversitiesPage({
 
 
 
-<script
+        <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": settings?.site_name,
+            "@type": "University",
             author: settings?.site_name,
-            interactionStatistic: [
-              {
-                "@type": "InteractionCounter",
-                interactionService: {
-                  "@type": "WebSite",
-                  name: "Twitter",
-                  url: "http://www.twitter.com",
-                },
-                interactionType: "https://schema.org/ShareAction",
-                userInteractionCount: "1203",
-              },
-              {
-                "@type": "InteractionCounter",
-                interactionType: "https://schema.org/CommentAction",
-                userInteractionCount: "78",
-              },
-            ],
+            // interactionStatistic: [
+            //   {
+            //     "@type": "InteractionCounter",
+            //     interactionService: {
+            //       "@type": "WebSite",
+            //       name: "Twitter",
+            //       url: "http://www.twitter.com",
+            //     },
+            //     interactionType: "https://schema.org/ShareAction",
+            //     userInteractionCount: "1203",
+            //   },
+            //   {
+            //     "@type": "InteractionCounter",
+            //     interactionType: "https://schema.org/CommentAction",
+            //     userInteractionCount: "78",
+            //   },
+            // ],
+            "headline": university.name,
+            description: university.short_description,
+            universityDetails: convert(university?.description, {
+              wordwrap: 130
+            }),
+            image: university.image.split('http://').join('https://'),
             name: university.name,
           }),
         }}

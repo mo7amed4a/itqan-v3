@@ -6,6 +6,7 @@ import { getTranslations } from "@/lib/dictionary";
 import ProgramTabs from "../programs/[slug]/_components/ProgramTabs";
 import { siteURL } from "@/lib/axios";
 import { headers } from "next/headers";
+import { convert } from "html-to-text";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: any }> }) {
   const locale = (await params).locale;
@@ -58,6 +59,37 @@ export default async function Page({ params }: { params: Promise<{ locale: any }
           </div>
         )}
       </ProgramTabs>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Scholarships',
+            interactionStatistic: [
+              {
+                '@type': 'InteractionCounter',
+                interactionService: {
+                  '@type': 'WebSite',
+                  name: 'Twitter',
+                  url: 'http://www.twitter.com'
+                },
+                interactionType: 'https://schema.org/ShareAction',
+                userInteractionCount: '1203'
+              },
+              {
+                '@type': 'InteractionCounter',
+                interactionType: 'https://schema.org/CommentAction',
+                userInteractionCount: '78'
+              }
+            ],
+            description: data?.overview?.meta_description,
+            overview: convert(data?.overview?.details, {
+              wordwrap: 130
+            }),
+            name: data?.overview?.name
+          })  
+        }}
+      />
     </div>
   );
 }

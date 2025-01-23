@@ -13,11 +13,11 @@ import LinkApp from './LinkApp'
 export default function BreadcrumbApp({
   className,
   last,
-  lang
+  lang,
 }: {
   className?: string
   last?: string
-  lang: any
+  lang: any,
 }) {
   const pathname = usePathname()
   const { locale } = useParams()
@@ -38,7 +38,7 @@ export default function BreadcrumbApp({
       ...segments.map((segment, index) => ({
         '@type': 'ListItem',
         position: index + 2, 
-        name: index === segments.length - 1 && last ? last : lang[segment] || segment,
+        name: decodeURIComponent(segment),
         item: `https://itqaneducation.com/${segments.slice(0, index + 1).join('/')}`
       }))
     ]

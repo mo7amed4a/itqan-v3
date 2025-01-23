@@ -15,10 +15,8 @@ const tajawal = Tajawal({
 export default async function notFound() {
   const headerList = headers();
   const pathname = (await headerList).get("x-current-path");
-  const { notFound } = await getTranslations(
-    // @ts-ignore
-   (pathname?.startsWith('/en') && "en") || (pathname?.startsWith('/fa') && "fa") || "ar"
-  )
+  const lng:any = (pathname?.startsWith('/en') && "en") || (pathname?.startsWith('/fa') && "fa") || "ar"
+  const { notFound } = await getTranslations(lng)
   
   
   return (
@@ -29,6 +27,7 @@ export default async function notFound() {
           ' container mx-auto 6xl:!container lg:max-w-[85vw]'
         }
       >
+        
         <div className='h-16 bg-primary'></div>
         <section className='grid h-screen items-center justify-center p-16 md:grid-cols-2'>
           {/* <div className='container flex flex-col items-center justify-center '>
