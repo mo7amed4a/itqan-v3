@@ -14,10 +14,11 @@ export default function CardUniversityTwoClient({
   return university && (
     <div className="shadow-all bg-white rounded-2xl p-3 shadow-all duration-300 group">
       <div className="relative">
-        <div className="rounded-2xl overflow-hidden h-36 md:h-52 w-full relative group-hover:before:bg-transparent before:bg-[#21837F]/40 before:absolute before:content-[''] before:inset-0 before:transition-all before:duration-300 before:size-full before:z-10 ">
+        {/* <div className="rounded-2xl overflow-hidden h-36 md:h-52 w-full relative group-hover:before:bg-transparent before:bg-[#21837F]/40 before:absolute before:content-[''] before:inset-0 before:transition-all before:duration-300 before:size-full before:z-10 "> */}
+        <div className="rounded-2xl overflow-hidden h-36 md:h-52 w-full ">
           <Image
             alt="alt"
-            width={500}
+            width={1200}
             height={500}
             className="rounded-2xl size-full absolute inset-0 z-0"
             src={university.image.split('http://').join('https://')}

@@ -124,8 +124,8 @@ const Steps = async ({
         <div className="border-4 bg-transparent p-2 rounded-full">
           <span
             className={`${
-              number === 1 ? "bg-secondary" : "bg-primary"
-            } size-7 md:size-10 p-1 flex items-center font-bold justify-center text-center rounded-full text-white text-2xl md:text-xl`}
+              number === 1 ? "" : "bg-primary"
+            } size-7 md:size-10 p-1 group-hover:bg-secondary flex items-center font-bold justify-center text-center rounded-full text-white text-2xl md:text-xl`}
           >
             {number}
           </span>

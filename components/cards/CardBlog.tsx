@@ -43,7 +43,7 @@ export default function CardBlog({
           />
         </CardHeader>
         <CardContent className="space-y-4 px-0 py-6">
-          <CardTitle className="text-sm md:text-2xl font-bold text-gray-500 group-hover:text-primary text-wrap w-full line-clamp-2">
+          <CardTitle className="text-sm md:text-2xl font-bold text-gray-500 group-hover:text-primary text-wrap w-full line-clamp-2 h-16">
             <h3>{blog.title}</h3>
           </CardTitle>
           <div className="md:h-11">

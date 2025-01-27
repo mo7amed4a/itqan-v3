@@ -3,19 +3,18 @@ import * as React from "react";
 import {
   Carousel,
   CarouselContent,
-  CarouselNext,
-  CarouselPrevious,
+  // CarouselNext,
+  // CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
-export function CustomCarousel({
+export function CustomCarouselHome({
   children,
   lng,
-  plugins=null
 }: {
   children: React.ReactNode;
   lng: string;
-  plugins?: any | null
 }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -40,20 +39,23 @@ export function CustomCarousel({
       api.scrollTo(index);
     }
   };
-
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+  )
   return (
     <div className="mx-auto mb-4">
       <Carousel
         setApi={setApi}
-        plugins={plugins}
+      plugins={[plugin.current]}
+
         className="w-full px-4"
         opts={{ loop: true, direction: localActive === "ar" ? "rtl" : "ltr" }}
       >
-        <CarouselContent className="gap-4 [&>*]:!ms-2">{children}</CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselContent className="px-10 md:px-0">{children}</CarouselContent>
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
       </Carousel>
-      <div className="py-2 text-center text-sm text-muted-foreground">
+      <div className="py-2 text-center text-sm text-muted-foreground md:hidden">
         <div className="flex justify-center gap-x-2">
           {Array.from({ length: count }).map((_, index) => (
             <span

@@ -32,13 +32,13 @@ export default async function HeaderApp({ locale }: { locale: any }) {
   return (
     <header className="flex flex-col sticky top-0 z-[20] bg-white">
       <div className="bg-primary ">
-        <div className="flex flex-row justify-between py-2 px-4 md:px-10 gap-2 md:w-[90vw] xl:container mx-auto">
+        <div className="flex flex-row justify-between items-start py-2 px-4 md:px-10 gap-2 md:w-[90vw] xl:container mx-auto">
           <div className="flex justify-between items-center md:justify-start gap-2 md:gap-4">
             <div className="z-[7817874]">
               <OpenBooking>
                 <Button
                   color="primary"
-                  className="border text-nowrap px-1 hover:!scale-x-100 h-8 md:h-9 py-0 text-[11px] md:px-4 md:text-base"
+                  className="border bg-secondary text-nowrap px-1 hover:!scale-x-100 h-8 md:h-9 py-0 text-[11px] md:px-4 md:text-base"
                 >
                   {Header.booking_btn}
                 </Button>
@@ -47,20 +47,20 @@ export default async function HeaderApp({ locale }: { locale: any }) {
             <LinkApp href="/agents">
               <Button
                 color="primary"
-                className="border bg-secondary md:bg-primary hover:!scale-x-100 text-nowrap md:px-6 lg:px-10 py-0 text-[9px] px-1 md:text-base h-8 md:h-9"
+                className="border bg-transparent hover:!scale-x-100 text-nowrap md:px-6 lg:px-10 py-0 text-[9px] px-1 md:text-base h-8 md:h-9"
               >
                 {Header.be_our_agent}
               </Button>
             </LinkApp>
             <div>
               <LinkApp href={`/followup-request`} >
-                <Button className="text-nowrap md:bg-secondary hover:!scale-x-100 text-white border border-white py-0 text-[9px] px-1 md:px-2 md:text-base h-8 md:h-9">
+                <Button className="text-nowrap bg-transparent hover:!scale-x-100 text-white border border-white py-0 text-[9px] px-1 md:px-2 md:text-base h-8 md:h-9">
                   {Header.follow_up_on_the_registration_request}
                 </Button>
               </LinkApp>
             </div>
           </div>
-          <div className="flex justify-between md:justify-start gap-4">
+          <div className="flex justify-between items-start md:justify-start gap-4">
             <div className="hidden md:block">
               <InputSearch placeholder={Header.search_for_the_university} />
             </div>

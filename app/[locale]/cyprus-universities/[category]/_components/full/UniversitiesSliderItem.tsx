@@ -25,8 +25,8 @@ export default async function UniversitiesSliderItem({
                 <Image
                   src={item.logo.split("http://").join("https://")}
                   alt="img"
-                  width={300}
-                  height={300}
+                  width={500}
+                  height={500}
                   className="w-24 h-24 rounded-full bg-white p-1"
                 />
                 <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-500">
@@ -41,8 +41,8 @@ export default async function UniversitiesSliderItem({
                           key={index}
                           src={e.flag.split("http://").join("https://")}
                           alt="img"
-                          width={300}
-                          height={300}
+                          width={500}
+                          height={500}
                           className="!size-9 rounded-full"
                         />
                       );
@@ -130,8 +130,8 @@ export default async function UniversitiesSliderItem({
               <Image
                 src={item.image.split("http://").join("https://")}
                 alt="img"
-                width={300}
-                height={300}
+                width={1200}
+                height={1200}
                 className="w-[95%] md:w-full h-52 md:h-[27rem] object-cover rounded-2xl"
               />
             </div>

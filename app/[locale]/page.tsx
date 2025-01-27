@@ -154,9 +154,9 @@ export default async function Page({
           </>
         </SectionApp>
         {/* الجامعات التركية */}
-          <TurkishSection home={Home} data={data} />
+          <TurkishSection home={Home} data={data} lng={lng} />
         {/* الجامعات القبرصية */}
-        <CyprusSection home={Home} data={data} />
+          <CyprusSection home={Home} data={data} lng={lng} />
         <div className="bg-white py-10">
           <SectionApp
             title={Home.steps.title}

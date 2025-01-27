@@ -10,7 +10,8 @@ export default async function BottomIcon({
   const res_Settings = await getData("/get_settings", lng);
   const settings = res_Settings?.data;
   return  (
-    <div className='fixed bottom-5 right-5 bg-red-400 size-14 rounded-full'>
+    // remove bg
+    <div className='fixed bottom-5 right-5 size-14 rounded-full'>
       <Link href={settings?.consult_url || ""} >
         <Image src={'/icons/WhatsApp-icon.png'}
         alt='whatsapp icon'

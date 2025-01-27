@@ -28,7 +28,7 @@ export default function Photos({ data }: { data: PhotosType }) {
           {data.map((item, index) => (
             <CarouselItem key={index} className="basis-1/3 md:basis-1/5 pb-8">
               <Card
-                className="rounded-full size-full border-none flex shadow-none justify-center p-4 bg-transparent items-center lg:w-56 text-center py-7"
+                className="size-full border-none flex shadow-none justify-center p-4 bg-transparent items-center lg:w-56 text-center py-7"
               >
                 <LinkApp href={'/university/'+item.slug}>
                     <Image
@@ -36,7 +36,7 @@ export default function Photos({ data }: { data: PhotosType }) {
                       width={500}
                       height={500}
                       alt="alt"
-                      className="rounded-full size-auto border-none bg-contain"
+                      className="size-auto md:p-5 border-none bg-contain"
                     />
                 </LinkApp>
               </Card>
