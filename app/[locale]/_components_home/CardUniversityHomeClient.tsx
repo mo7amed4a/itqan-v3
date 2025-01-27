@@ -15,7 +15,8 @@ export default function CardUniversityHomeClient({
     return university && (
     <div className="shadow-none bg-white rounded-2xl p-3 shadow-all duration-300 group mt-4">
       <div className="relative">
-        <div className="rounded-2xl overflow-hidden h-36 md:h-52 w-full relative group-hover:before:bg-transparent before:bg-[#21837F]/40 before:absolute before:content-[''] before:inset-0 before:transition-all before:duration-300 before:size-full before:z-10 ">
+        {/* <div className="rounded-2xl overflow-hidden h-36 md:h-52 w-full relative group-hover:before:bg-transparent before:bg-[#21837F]/40 before:absolute before:content-[''] before:inset-0 before:transition-all before:duration-300 before:size-full before:z-10 "> */}
+        <div className="rounded-2xl overflow-hidden h-36 md:h-52 w-full">
           <Image
             alt="alt"
             width={500}
