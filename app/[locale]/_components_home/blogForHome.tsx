@@ -1,3 +1,4 @@
+"use client";
 import CardBlog from "@/components/cards/CardBlog";
 import {
   CarouselItem,
