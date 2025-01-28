@@ -3,6 +3,8 @@ import * as React from "react";
 import {
   Carousel,
   CarouselContent,
+  CarouselNext,
+  CarouselPrevious,
   // CarouselNext,
   // CarouselPrevious,
   type CarouselApi,
@@ -13,10 +15,16 @@ export function CustomCarouselHome({
   children,
   lng,
   className,
+  btns=false,
+  classNamePrevious,
+  classNameNext
 }: {
   children: React.ReactNode;
   lng: string;
-  className?: string
+  className?: string,
+  btns?:boolean,
+  classNamePrevious?:string,
+  classNameNext?:string
 }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -54,8 +62,10 @@ export function CustomCarouselHome({
         opts={{ loop: true, direction: localActive === "ar" ? "rtl" : "ltr" }}
       >
         <CarouselContent className={`px-10 md:px-0 ${className}`}>{children}</CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
+        {btns && <>
+          <CarouselPrevious className={classNamePrevious} />
+          <CarouselNext className={classNameNext} />
+        </>}
       </Carousel>
       <div className="py-2 text-center text-sm text-muted-foreground md:hidden">
         <div className="flex justify-center gap-x-2">

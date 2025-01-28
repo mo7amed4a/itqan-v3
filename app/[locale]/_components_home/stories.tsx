@@ -2,8 +2,6 @@
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import {
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { CustomCarouselHome } from "@/components/ui/CustomCarouselHome";
 import Image from "next/image";
@@ -29,7 +27,13 @@ export default function Stories({
     data && (
       <div 
       className="lg:w-2/4 mx-auto mt-10">
-        <CustomCarouselHome lng={lng} className="h-auto px-4 md:px-0">
+        <CustomCarouselHome 
+          lng={lng}
+          className="h-auto px-4 md:px-0"
+          classNameNext="!text-white bg-primary"
+          classNamePrevious="!text-white bg-primary"
+          btns
+        >
           {data.map((item, index) => <CarouselItem key={index}>
             <Card className="bg-gray-100 shadow-none border-none !rounded-s-[800px] rounded-e-full relative h-56 mb-10 mt-16">
                 <div className="flex justify-center items-center absolute inset-x-0 top-0 -translate-y-2/4 z-10">
@@ -44,8 +48,6 @@ export default function Stories({
             </Card>
           </CarouselItem>)}
         </CustomCarouselHome>
-        <CarouselNext className="!text-white bg-primary"/>
-        <CarouselPrevious className="!text-white bg-primary" />
       </div>
     )
   );
