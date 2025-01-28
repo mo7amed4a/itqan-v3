@@ -106,6 +106,7 @@ export default async function page({
                prose-blockquote:border-secondary [&>p>p>a>strong]:!text-secondary
                [&>h2>strong>span]:!text-primary
                [&>p#main-toc>strong]:!text-primary
+               prose-h3:ps-2
                '
             ></div>
           </section>
