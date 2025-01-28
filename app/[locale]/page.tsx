@@ -150,7 +150,7 @@ export default async function Page({
           className="container lg:max-w-[85vw] 6xl:!container mx-auto"
         >
           <>
-            <Photos data={data?.university_logos} />
+            <Photos data={data?.university_logos} lng={lng}/>
           </>
         </SectionApp>
         {/* الجامعات التركية */}
@@ -179,13 +179,13 @@ export default async function Page({
               <span className="text-lg text-center md:text-4xl font-bold text-muted-foreground/90">
                 {Home.stories.title3}
               </span>
-              <Stories data={data?.testemonials} />
+              <Stories lng={lng} data={data?.testemonials} />
             </>
           </SectionApp>
         </div>
         {/* videos */}
         <div className="mb-20 bg-white py-20">
-          <Videos data={data?.videos} />
+          <Videos lng={lng} data={data?.videos} />
         </div>
 
         <SectionApp
@@ -193,7 +193,7 @@ export default async function Page({
           className="container lg:max-w-[85vw] 6xl:!container  mx-auto px-4 md:px-0"
         >
           <>
-            <BlogForHome textBtn={Home.blogs.read_more} data={data?.blog} />
+            <BlogForHome lng={lng} textBtn={Home.blogs.read_more} data={data?.blog} />
           </>
         </SectionApp>
 

@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import { PlayCircleIcon } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { CarouselItem } from "@/components/ui/carousel";
+import { CustomCarouselHome } from "@/components/ui/CustomCarouselHome";
 
 interface VideoItem {
   id: number;
@@ -16,7 +17,7 @@ interface VideoItem {
   updated_at: string;
 }
 
-export default function Videos({ data }: { data: VideoItem[] }) {
+export default function Videos({ data, lng}: { data: VideoItem[], lng: any}) {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   const handleVideoClick = (id: number) => {
@@ -29,8 +30,7 @@ export default function Videos({ data }: { data: VideoItem[] }) {
 
   return data && (
     <div className="container lg:max-w-[85vw] 6xl:!container   mx-auto px-4 md:px-0">
-       <Carousel>
-          <CarouselContent className="h-auto px-4 md:px-0">
+       <CustomCarouselHome lng={lng} className="h-auto px-4 md:px-0">
              {data.map((item) => (
             <CarouselItem className="basis-1/2 md:basis-1/5 pb-8" key={item.id}>
             <Card className="bg-[#F5F7F9] rounded-xl border-none text-center shadow-none w-full">
@@ -65,8 +65,7 @@ export default function Videos({ data }: { data: VideoItem[] }) {
             </Card>
           </CarouselItem>
         ))}
-      </CarouselContent>
-    </Carousel>
+      </CustomCarouselHome>
     </div>
   );
 }

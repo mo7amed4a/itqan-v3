@@ -1,9 +1,8 @@
 import CardBlog from "@/components/cards/CardBlog";
 import {
-  Carousel,
-  CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { CustomCarouselHome } from "@/components/ui/CustomCarouselHome";
 import React from "react";
 
 type BlogsType = {
@@ -25,13 +24,14 @@ type BlogsType = {
 export default function BlogForHome({
   data,
   textBtn,
+  lng
 }: {
   data: BlogsType;
   textBtn: string;
+  lng:any
 }) {
   return data && (
-    <Carousel>
-      <CarouselContent className="h-auto px-10 md:px-0">
+    <CustomCarouselHome lng={lng} className="h-auto px-10 md:px-0">
         {data?.map((item) => (
           <CarouselItem
             key={item.id}
@@ -40,7 +40,6 @@ export default function BlogForHome({
             <CardBlog textBtn={textBtn} blog={item} />
           </CarouselItem>
         ))}
-      </CarouselContent>
-    </Carousel>
+    </CustomCarouselHome>
   );
 }

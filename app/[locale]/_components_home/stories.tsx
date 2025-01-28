@@ -1,18 +1,17 @@
 "use client";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import {
-  Carousel,
-  CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { CustomCarouselHome } from "@/components/ui/CustomCarouselHome";
 import Image from "next/image";
 import React from "react";
 
 export default function Stories({
   data,
+  lng
 }: {
   data: {
     id: 5;
@@ -23,16 +22,14 @@ export default function Stories({
     created_at: "2025-01-04T11:41:13.000000Z";
     updated_at: "2025-01-04T15:16:24.000000Z";
   }[];
+  lng: any
 }) {
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnMouseEnter: true })
-  )
+
   return (
     data && (
-      <Carousel 
-      plugins={[plugin.current]}
+      <div 
       className="lg:w-2/4 mx-auto mt-10">
-        <CarouselContent  className="h-auto px-4 md:px-0">
+        <CustomCarouselHome lng={lng} className="h-auto px-4 md:px-0">
           {data.map((item, index) => <CarouselItem key={index}>
             <Card className="bg-gray-100 shadow-none border-none !rounded-s-[800px] rounded-e-full relative h-56 mb-10 mt-16">
                 <div className="flex justify-center items-center absolute inset-x-0 top-0 -translate-y-2/4 z-10">
@@ -46,10 +43,10 @@ export default function Stories({
                 </CardContent>
             </Card>
           </CarouselItem>)}
-        </CarouselContent>
+        </CustomCarouselHome>
         <CarouselNext className="!text-white bg-primary"/>
         <CarouselPrevious className="!text-white bg-primary" />
-      </Carousel>
+      </div>
     )
   );
 }

@@ -12,9 +12,11 @@ import Autoplay from "embla-carousel-autoplay";
 export function CustomCarouselHome({
   children,
   lng,
+  className,
 }: {
   children: React.ReactNode;
   lng: string;
+  className?: string
 }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -51,7 +53,7 @@ export function CustomCarouselHome({
         className="w-full px-4"
         opts={{ loop: true, direction: localActive === "ar" ? "rtl" : "ltr" }}
       >
-        <CarouselContent className="px-10 md:px-0">{children}</CarouselContent>
+        <CarouselContent className={`px-10 md:px-0 ${className}`}>{children}</CarouselContent>
         {/* <CarouselPrevious />
         <CarouselNext /> */}
       </Carousel>

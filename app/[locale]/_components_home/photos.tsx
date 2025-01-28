@@ -1,49 +1,39 @@
-"use client"
-import React from "react";
-import { Card } from "@/components/ui/card";
-import Image from "next/image";
+'use client'
+import React from 'react'
+import { Card } from '@/components/ui/card'
+import Image from 'next/image'
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
-import LinkApp from "@/components/global/LinkApp";
-
+  CarouselItem
+} from '@/components/ui/carousel'
+import LinkApp from '@/components/global/LinkApp'
+import { CustomCarouselHome } from '@/components/ui/CustomCarouselHome'
 
 type PhotosType = {
-  logo: string;
-  name: string;
-  slug: string;
-}[];
-export default function Photos({ data }: { data: PhotosType }) {
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
-  )
+  logo: string
+  name: string
+  slug: string
+}[]
+export default function Photos({ data, lng}: { data: PhotosType , lng: any}) {
+ 
   return (
     data && (
-      <Carousel 
-      plugins={[plugin.current]}>
-        <CarouselContent className="md:h-80">
+      <CustomCarouselHome lng={lng} className='md:h-80'>
           {data.map((item, index) => (
-            <CarouselItem key={index} className="basis-1/3 md:basis-1/5 pb-8">
-              <Card
-                className="size-full border-none flex shadow-none justify-center p-4 bg-transparent items-center lg:w-56 text-center py-7"
-              >
-                <LinkApp href={'/university/'+item.slug}>
-                    <Image
-                      src={item.logo.split("http://").join("https://")}
-                      width={500}
-                      height={500}
-                      alt="alt"
-                      className="size-auto md:p-5 border-none bg-contain"
-                    />
+            <CarouselItem key={index} className='basis-1/3 pb-8 md:basis-1/5'>
+              <Card className='flex size-full items-center justify-center border-none bg-transparent p-4 py-7 text-center shadow-none lg:w-56'>
+                <LinkApp href={'/university/' + item.slug}>
+                  <Image
+                    src={item.logo.split('http://').join('https://')}
+                    width={500}
+                    height={500}
+                    alt='alt'
+                    className='size-auto border-none bg-contain md:p-5'
+                  />
                 </LinkApp>
               </Card>
             </CarouselItem>
           ))}
-        </CarouselContent>
-      </Carousel>
+      </CustomCarouselHome>
     )
-  );
+  )
 }
