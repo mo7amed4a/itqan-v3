@@ -11,11 +11,9 @@ import {
 export function CustomCarousel({
   children,
   lng,
-  plugins=null
 }: {
   children: React.ReactNode;
   lng: string;
-  plugins?: any | null
 }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -45,7 +43,6 @@ export function CustomCarousel({
     <div className="mx-auto mb-4">
       <Carousel
         setApi={setApi}
-        plugins={plugins}
         className="w-full px-4"
         opts={{ loop: true, direction: localActive === "ar" ? "rtl" : "ltr" }}
       >

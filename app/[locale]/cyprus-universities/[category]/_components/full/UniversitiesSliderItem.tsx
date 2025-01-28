@@ -89,33 +89,6 @@ export default async function UniversitiesSliderItem({
                 </div>
               </section>
 
-              {/* <div className="space-y-2 text-sm md:text-base">
-                <h2 className="text-secondary">{t("topMajors")} :</h2>
-                <ul className="grid grid-cols-2 lg:flex flex-wrap gap-x-10 text-base text-gray-500">
-                  {item?.first_programs &&
-                    item?.first_programs.length > 0 &&
-                    item?.first_programs.map((program: any, index: number) => {
-                      return (
-                        <li className="list text-sm md:text-base" key={index}>
-                          {program}
-                        </li>
-                      );
-                    })}
-                </ul>
-              </div>
-              <div className="flex gap-4 md:gap-8 text-sm md:text-base">
-                <span className="text-secondary text-nowrap">
-                  {t("universityInfo.startingPrices")} :{" "}
-                </span>
-                <span className="flex gap-x-2 text-sm md:text-sm">
-                  <span>{t("universityInfo.priceRange.from")}</span>{" "}
-                  <span>{item.min_annual_fees}$</span>
-                </span>
-                <span className="flex gap-x-2 text-sm md:text-sm">
-                  <span>{t("universityInfo.priceRange.to")}</span>{" "}
-                  <span>{item.max_annual_fees}$</span>
-                </span>
-              </div> */}
               <div className="flex justify-center">
                 <Button
                   color="primary"

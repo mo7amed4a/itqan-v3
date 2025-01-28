@@ -54,7 +54,7 @@ export default function LocaleSwitcher() {
       className="flex gap-x-3"
     >
       <SelectTrigger
-        className="w-auto p-1 bg-transparent !text-white focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-0 md:h-9"
+        className="w-auto p-1 h-8 bg-transparent !text-white focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-0 md:h-9"
         aria-label={'Select a locale'}
       >
         <div className="!text-white text-xs text-nowrap">
