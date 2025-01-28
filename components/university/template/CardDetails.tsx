@@ -16,7 +16,7 @@ export default async function CardDetails({
     university?.description && (
       <div className={`px-4 py-10 mt-10 ${bg === false && "bg-white"} rounded-md`}>
         <div className="container lg:max-w-[85vw] mx-auto">
-          <h2 className="text-lg md:text-xl font-bold mb-4">
+          <h2 className="text-lg text-primary md:text-xl lg:text-2xl font-bold mb-4">
             {university_details.description} {university.name}
           </h2>
           <ReadMore

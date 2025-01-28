@@ -115,9 +115,6 @@ export default async function UniversitiesPage({
           </div>
         )}
         
-
-
-
         <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

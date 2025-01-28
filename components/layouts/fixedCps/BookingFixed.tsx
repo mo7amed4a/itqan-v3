@@ -228,7 +228,7 @@ export default function BookingFixed({ lng, dataLang, child=null }: { lng: strin
      {child ? <div className="-mt-0 flex items-start p-0 m-0" onClick={() => setIsOpen(true)}>
       {child}
      </div> : <div
-        className={`hidden fixed top-1/3 right-0 cursor-pointer text-nowrap bg-secondary p-2.5 md:p-4 rtl:flex-row-reverse items-center text-sm md:text-base text-white rounded-l-xl md:flex z-[10] w-[8rem] md:w-[9rem] translate-x-[5.5rem] gap-x-3 hover:translate-x-0 duration-300 `}
+        className={` fixed top-1/3 right-0 cursor-pointer text-nowrap bg-secondary p-2.5 md:p-4 rtl:flex-row-reverse items-center text-sm md:text-base text-white rounded-l-xl md:flex z-[10] w-[8rem] md:w-[9rem] translate-x-[5.5rem] gap-x-3 hover:translate-x-0 duration-300 `}
         onClick={() => setIsOpen(true)}
       >
         <FaHandPointRight className="text-white text-lg text-start md:text-2xl w-8" />

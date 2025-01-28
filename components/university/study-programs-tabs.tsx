@@ -12,6 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { ScrollArea, ScrollBar } from '../ui/scroll-area'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
 
 interface Program {
   id: number
@@ -58,6 +59,11 @@ export default function StudyProgramsTabs({ studyPrograms, lng, university_detai
        </ScrollArea>
       {studyPrograms.map((level) => (
         <TabsContent key={level?.level_id} value={level?.level_id?.toString() || ''}>
+           <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>{university_detailsLang.tabs.majors}</AccordionTrigger>
+        <AccordionContent>
+      
           <div className="rounded-xl border overflow-hidden">
             <Table dir="rtl" >
               <TableHeader className="bg-primary">
@@ -90,6 +96,7 @@ export default function StudyProgramsTabs({ studyPrograms, lng, university_detai
               </TableBody>
             </Table>
           </div>
+          </AccordionContent></AccordionItem></Accordion>
         </TabsContent>
       ))}
     </Tabs>

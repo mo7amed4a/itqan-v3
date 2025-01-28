@@ -27,7 +27,7 @@ export default async function CardUniOne({ university, lng }: { university: any,
             </div>
           </div>
           <div className="flex gap-4 w-full">
-            <Avatar className="size-24">
+            <Avatar className="size-24 md:size-32">
               <AvatarImage
                 className="p-4"
                 src={university.logo.split("http://").join("https://")}

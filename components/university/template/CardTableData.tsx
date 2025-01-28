@@ -21,7 +21,7 @@ export default async function CardTableData({
             <h2 className="text-2xl font-bold mb-4 pt-8 md:pt-0">
               {university_details.takh}
             </h2>
-            <div className="flex justify-between items-start flex-col-reverse lg:flex-row-reverse">
+            <div className="flex justify-between items-start flex-col-reverse gap-y-4 lg:flex-row-reverse">
               <StudyProgramsTabs
                 university_detailsLang={university_details}
                 studyPrograms={study_programs}
