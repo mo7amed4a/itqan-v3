@@ -59,9 +59,9 @@ export default function StudyProgramsTabs({ studyPrograms, lng, university_detai
        </ScrollArea>
       {studyPrograms.map((level) => (
         <TabsContent key={level?.level_id} value={level?.level_id?.toString() || ''}>
-           <Accordion type="single" collapsible className="w-full">
+           <Accordion type="single" collapsible className="w-full -mt-4">
       <AccordionItem value="item-1">
-        <AccordionTrigger>{university_detailsLang.tabs.majors}</AccordionTrigger>
+        <AccordionTrigger small>{level?.level_name}</AccordionTrigger>
         <AccordionContent>
       
           <div className="rounded-xl border overflow-hidden">
